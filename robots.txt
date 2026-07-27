@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ykozar.github.io/ivan-baisa/sitemap.xml
