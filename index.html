@@ -888,6 +888,16 @@ var io=new IntersectionObserver(function(es){
   es.forEach(function(e,i){if(e.isIntersecting){setTimeout(function(){e.target.classList.add('in');},i*70);io.unobserve(e.target);}});
 },{threshold:.1,rootMargin:'0px 0px -50px'});
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+// Safety net: never let above-the-fold content stay hidden if the observer is
+// throttled (background tab, some crawlers, reduced-capability browsers).
+function revealVisible(){
+  document.querySelectorAll('.rv:not(.in)').forEach(function(el){
+    if(el.getBoundingClientRect().top < innerHeight){el.classList.add('in');io.unobserve(el);}
+  });
+}
+setTimeout(revealVisible,1400);
+addEventListener('load',function(){setTimeout(revealVisible,300);});
+document.addEventListener('visibilitychange',function(){if(!document.hidden)setTimeout(revealVisible,200);});
 </script>
 </body>
 </html>
