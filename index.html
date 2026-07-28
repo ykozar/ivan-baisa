@@ -7,8 +7,12 @@
 <title>Ivan Baisa — Footballer, No. 11 | Prague, Czech Republic</title>
 <meta name="description" content="Ivan Baisa (Baisa Ivan) — footballer and attacking midfielder in Prague, Czech Republic. Superliga Muži and U23 champion 2025/26, VEKRA Superfinále winner 2026. Career, stats, trophies and contact.">
 <meta name="author" content="Ivan Baisa">
-<meta name="keywords" content="Ivan Baisa, Baisa Ivan, Ivan Baisa fotbalista, Ivan Baisa footballer, Ivan Baisa Praha, Ivan Baisa Prague, malý fotbal, Superliga, Superfinále, VEKRA Superfinále 2026, attacking midfielder, záložník, fotbal Praha, číslo 11">
+<meta name="keywords" content="Ivan Baisa, Baisa Ivan, Іван Байса, Ivan Baisa fotbalista, Ivan Baisa footballer, Ivan Baisa Praha, Ivan Baisa Prague, malý fotbal, Superliga, Superfinále, VEKRA Superfinále 2026, attacking midfielder, záložník, півзахисник, fotbal Praha, футболіст Прага, číslo 11">
 <link rel="canonical" href="https://baisa.itsupport.space/">
+<link rel="alternate" hreflang="en" href="https://baisa.itsupport.space/">
+<link rel="alternate" hreflang="cs" href="https://baisa.itsupport.space/?lang=cs">
+<link rel="alternate" hreflang="uk" href="https://baisa.itsupport.space/?lang=uk">
+<link rel="alternate" hreflang="x-default" href="https://baisa.itsupport.space/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="googlebot" content="index, follow">
 <meta name="theme-color" content="#0b63d6">
@@ -24,6 +28,7 @@
 <meta property="og:image:alt" content="Ivan Baisa on the ball in a match in Prague, wearing the number 11 shirt">
 <meta property="og:locale" content="en_GB">
 <meta property="og:locale:alternate" content="cs_CZ">
+<meta property="og:locale:alternate" content="uk_UA">
 <meta property="profile:first_name" content="Ivan">
 <meta property="profile:last_name" content="Baisa">
 
@@ -42,7 +47,7 @@
       "@type": "Person",
       "@id": "https://baisa.itsupport.space/#person",
       "name": "Ivan Baisa",
-      "alternateName": ["Baisa Ivan", "Ivan Bajsa"],
+      "alternateName": ["Baisa Ivan", "Ivan Bajsa", "Іван Байса", "Байса Іван"],
       "givenName": "Ivan",
       "familyName": "Baisa",
       "jobTitle": "Footballer",
@@ -50,12 +55,9 @@
       "url": "https://baisa.itsupport.space/",
       "image": "https://baisa.itsupport.space/match-prague.jpg",
       "nationality": {"@type": "Country", "name": "Czech Republic"},
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Prague",
-        "addressCountry": "CZ"
-      },
+      "address": {"@type": "PostalAddress", "addressLocality": "Prague", "addressCountry": "CZ"},
       "homeLocation": {"@type": "Place", "name": "Prague, Czech Republic"},
+      "knowsLanguage": ["en", "cs", "uk"],
       "knowsAbout": ["Football", "Fotbal", "Malý fotbal", "Superliga", "Attacking midfield", "Set pieces"],
       "award": [
         "Superliga Muži 2025/26 — 1. místo",
@@ -70,7 +72,7 @@
       "@id": "https://baisa.itsupport.space/#website",
       "url": "https://baisa.itsupport.space/",
       "name": "Ivan Baisa",
-      "inLanguage": "en",
+      "inLanguage": ["en", "cs", "uk"],
       "about": {"@id": "https://baisa.itsupport.space/#person"}
     },
     {
@@ -91,57 +93,96 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+(function(){try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+</script>
 <style>
 :root{
-  --ink:#0b1024;
-  --ink-2:#3c4160;
-  --paper:#fbfcff;
   --blue:#0b63d6;
   --sky:#22c9f2;
   --violet:#5b2bff;
   --pink:#ff2e88;
   --amber:#ffb800;
   --lime:#00e08a;
-  --line:rgba(11,16,36,.12);
   --radius:22px;
-  --shadow:0 24px 60px -20px rgba(11,16,36,.3);
   --max:1140px;
+
+  --ink:#0b1024;
+  --ink-2:#3c4160;
+  --paper:#fbfcff;
+  --surface:#ffffff;
+  --surface-2:#fbfcff;
+  --line:rgba(11,16,36,.12);
+  --nav-bg:rgba(251,252,255,.75);
+  --tag-bg:rgba(11,16,36,.05);
+  --on-ink:#ffffff;
+  --shadow:0 24px 60px -20px rgba(11,16,36,.3);
+  --blob-o1:.22;--blob-o2:.2;--blob-o3:.14;
+  --gold-bg:rgba(255,184,0,.18);--gold-fg:#7d5a00;
+}
+[data-theme="dark"]{
+  --ink:#eaeefb;
+  --ink-2:#a2abc7;
+  --paper:#070a14;
+  --surface:#101527;
+  --surface-2:#0b0f1d;
+  --line:rgba(255,255,255,.13);
+  --nav-bg:rgba(7,10,20,.78);
+  --tag-bg:rgba(255,255,255,.08);
+  --on-ink:#0b1024;
+  --shadow:0 24px 60px -20px rgba(0,0,0,.75);
+  --blob-o1:.3;--blob-o2:.26;--blob-o3:.18;
+  --gold-bg:rgba(255,184,0,.16);--gold-fg:#ffcf5c;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .35s ease,color .35s ease}
 h1,h2,h3{font-family:'Space Grotesk',Inter,sans-serif;letter-spacing:-.03em;line-height:1.05}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 .eyebrow{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);display:inline-flex;align-items:center;gap:8px}
-.eyebrow::before{content:"";width:22px;height:2px;background:var(--sky);border-radius:2px}
+[data-theme="dark"] .eyebrow{color:var(--sky)}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--sky);border-radius:2px;flex:0 0 22px}
 
-header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(251,252,255,.75);border-bottom:1px solid transparent;transition:border-color .3s}
+header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:var(--nav-bg);border-bottom:1px solid transparent;transition:border-color .3s,background .35s}
 header.nav.stuck{border-bottom-color:var(--line)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
-.brand{display:flex;align-items:center;gap:11px;font-family:'Space Grotesk';font-weight:700;font-size:17px}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.brand{display:flex;align-items:center;gap:11px;font-family:'Space Grotesk';font-weight:700;font-size:17px;flex:0 0 auto}
 .mark{width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,var(--blue),var(--sky));display:grid;place-items:center;color:#fff;font-size:14px;font-weight:700;box-shadow:0 6px 18px -6px rgba(11,99,214,.75)}
-.nav-links{display:flex;align-items:center;gap:26px;font-size:15px;font-weight:500}
+.nav-links{display:flex;align-items:center;gap:24px;font-size:15px;font-weight:500}
 .nav-links a{color:var(--ink-2);transition:color .2s}
 .nav-links a:hover{color:var(--ink)}
+.nav-tools{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+
+.langsw{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--surface);gap:2px}
+.langsw button{border:0;background:none;cursor:pointer;font:600 12.5px Inter,sans-serif;color:var(--ink-2);padding:6px 11px;border-radius:999px;transition:.2s;letter-spacing:.03em}
+.langsw button:hover{color:var(--ink)}
+.langsw button[aria-pressed="true"]{background:linear-gradient(135deg,var(--blue),var(--sky));color:#fff}
+.themebtn{width:38px;height:38px;border-radius:12px;border:1px solid var(--line);background:var(--surface);cursor:pointer;display:grid;place-items:center;color:var(--ink);transition:.2s}
+.themebtn:hover{border-color:var(--ink-2);transform:translateY(-1px)}
+.themebtn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+[data-theme="dark"] .themebtn .i-sun{display:block}
+[data-theme="dark"] .themebtn .i-moon{display:none}
+.themebtn .i-sun{display:none}
+.themebtn .i-moon{display:block}
+
 .btn{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;border-radius:999px;font-weight:600;font-size:15px;border:1.5px solid transparent;cursor:pointer;transition:transform .18s,box-shadow .18s}
-.btn-primary{background:var(--ink);color:#fff}
+.btn-primary{background:var(--ink);color:var(--on-ink)}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 28px -12px rgba(11,16,36,.6)}
-.btn-ghost{border-color:var(--line);color:var(--ink);background:#fff}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:var(--surface)}
 .btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
 .btn-ig{background:linear-gradient(135deg,#833ab4,#fd1d1d 55%,#fcb045);color:#fff}
 .btn-ig:hover{transform:translateY(-2px);box-shadow:0 14px 28px -12px rgba(253,29,29,.55)}
 .nav-toggle{display:none;background:none;border:0;font-size:24px;cursor:pointer;color:var(--ink)}
 
-/* HERO */
 .hero{position:relative;padding:84px 0 76px;overflow:hidden}
 .blob{position:absolute;border-radius:50%;filter:blur(72px);pointer-events:none}
-.b1{width:520px;height:520px;background:var(--blue);top:-200px;right:-120px;opacity:.22}
-.b2{width:400px;height:400px;background:var(--sky);bottom:-170px;left:-140px;opacity:.2}
-.b3{width:300px;height:300px;background:var(--amber);top:190px;left:40%;opacity:.14}
+.b1{width:520px;height:520px;background:var(--blue);top:-200px;right:-120px;opacity:var(--blob-o1)}
+.b2{width:400px;height:400px;background:var(--sky);bottom:-170px;left:-140px;opacity:var(--blob-o2)}
+.b3{width:300px;height:300px;background:var(--amber);top:190px;left:40%;opacity:var(--blob-o3)}
 .hero-grid{position:relative;display:grid;grid-template-columns:1.06fr .94fr;gap:56px;align-items:center}
-.hero h1{font-size:clamp(42px,6.6vw,76px);margin:20px 0 22px}
+.hero h1{font-size:clamp(38px,6.2vw,74px);margin:20px 0 22px}
 .hl{position:relative;display:inline-block}
 .hl::after{content:"";position:absolute;left:-2px;right:-2px;bottom:.06em;height:.32em;z-index:-1;background:linear-gradient(90deg,var(--sky),var(--blue));border-radius:4px;transform:rotate(-1.2deg);opacity:.55}
 .hero p.lede{font-size:19px;line-height:1.62;color:var(--ink-2);max-width:52ch}
@@ -149,16 +190,16 @@ header.nav.stuck{border-bottom-color:var(--line)}
 .meta{display:flex;flex-wrap:wrap;gap:26px;margin-top:32px;font-size:13.5px;color:var(--ink-2);font-weight:500}
 .meta b{display:block;font-family:'Space Grotesk';font-size:17px;color:var(--ink);margin-bottom:2px}
 
-.shot{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#e9eef7}
+.shot{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--surface)}
 .shot img{width:100%;height:100%;object-fit:cover}
 .hero-shot{aspect-ratio:4/5}
-.chip{position:absolute;background:#fff;border-radius:14px;padding:12px 16px;box-shadow:0 12px 30px -12px rgba(11,16,36,.4);font-size:13px;font-weight:600;display:flex;align-items:center;gap:9px;z-index:2}
+.chip{position:absolute;background:var(--surface);border-radius:14px;padding:12px 16px;box-shadow:0 12px 30px -12px rgba(11,16,36,.4);font-size:13px;font-weight:600;display:flex;align-items:center;gap:9px;z-index:2}
 .chip small{display:block;font-weight:500;color:var(--ink-2);font-size:11px}
 .chip-a{left:-24px;top:12%}
 .chip-b{right:-20px;bottom:10%}
 .sq{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;font-size:14px}
 
-.marquee{border-block:1px solid var(--line);background:#fff;padding:16px 0;overflow:hidden;white-space:nowrap}
+.marquee{border-block:1px solid var(--line);background:var(--surface);padding:16px 0;overflow:hidden;white-space:nowrap}
 .marquee-track{display:inline-flex;gap:52px;animation:slide 26s linear infinite}
 .marquee span{font-family:'Space Grotesk';font-weight:500;font-size:15px;color:var(--ink-2);display:inline-flex;align-items:center;gap:52px}
 .marquee span::after{content:"◆";color:var(--sky);font-size:9px}
@@ -166,56 +207,57 @@ header.nav.stuck{border-bottom-color:var(--line)}
 
 section{padding:90px 0}
 .sec-head{max-width:680px;margin-bottom:46px}
-.sec-head h2{font-size:clamp(31px,4.4vw,47px);margin:16px 0 16px}
+.sec-head h2{font-size:clamp(28px,4.2vw,47px);margin:16px 0 16px}
 .sec-head p{color:var(--ink-2);font-size:17px;line-height:1.65}
 
 .statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.stat{border:1px solid var(--line);border-radius:18px;padding:26px;background:#fff}
+.stat{border:1px solid var(--line);border-radius:18px;padding:26px;background:var(--surface)}
 .stat b{font-family:'Space Grotesk';font-size:44px;display:block;line-height:1}
 .stat span{font-size:13.5px;color:var(--ink-2);font-weight:500;display:block;margin-top:6px}
-.stat i{font-style:normal;font-size:11.5px;color:var(--ink-2);opacity:.7;display:block;margin-top:10px}
+.stat i{font-style:normal;font-size:11.5px;color:var(--ink-2);opacity:.75;display:block;margin-top:10px}
 .s1 b{color:var(--blue)}.s2 b{color:var(--sky)}.s3 b{color:var(--amber)}.s4 b{color:var(--lime)}
+[data-theme="dark"] .s1 b{color:#5b9dfb}
 
 .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-.card{position:relative;border-radius:var(--radius);padding:32px;overflow:hidden;border:1px solid var(--line);background:#fff;transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s}
+.card{position:relative;border-radius:var(--radius);padding:32px;overflow:hidden;border:1px solid var(--line);background:var(--surface);transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s}
 .card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
 .card .bar{position:absolute;inset:0 0 auto 0;height:5px}
-.card .num{font-family:'Space Grotesk';font-size:13px;font-weight:700;color:var(--ink-2);opacity:.55}
-.card h3{font-size:24px;margin:13px 0 11px}
+.card .num{font-family:'Space Grotesk';font-size:13px;font-weight:700;color:var(--ink-2);opacity:.6}
+.card h3{font-size:23px;margin:13px 0 11px}
 .card p{color:var(--ink-2);line-height:1.66;font-size:15.5px}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-.tag{font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;background:rgba(11,16,36,.05);color:var(--ink-2)}
-.tag.gold{background:rgba(255,184,0,.18);color:#7d5a00}
+.tag{font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;background:var(--tag-bg);color:var(--ink-2)}
+.tag.gold{background:var(--gold-bg);color:var(--gold-fg)}
 .c1 .bar{background:linear-gradient(90deg,var(--amber),var(--pink))}
 .c2 .bar{background:linear-gradient(90deg,var(--blue),var(--sky))}
 .c3 .bar{background:linear-gradient(90deg,var(--lime),var(--sky))}
 .c4 .bar{background:linear-gradient(90deg,var(--violet),var(--blue))}
 
-.career{background:#fff;border-block:1px solid var(--line)}
+.career{background:var(--surface);border-block:1px solid var(--line)}
 .career-grid{display:grid;grid-template-columns:1fr .8fr;gap:56px;align-items:start}
 .tl{position:relative;padding-left:32px}
 .tl::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--blue),var(--sky),var(--amber))}
 .tl-item{position:relative;padding:0 0 38px}
 .tl-item:last-child{padding-bottom:0}
-.tl-item::before{content:"";position:absolute;left:-32px;top:6px;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--blue)}
+.tl-item::before{content:"";position:absolute;left:-32px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--surface);border:3px solid var(--blue)}
 .tl-item:nth-child(2)::before{border-color:var(--sky)}
 .tl-item:nth-child(3)::before{border-color:var(--amber)}
 .tl-item:nth-child(4)::before{border-color:var(--lime)}
 .yr{font-family:'Space Grotesk';font-weight:700;font-size:13px;color:var(--ink-2);letter-spacing:.06em}
 .tl-item h3{font-size:22px;margin:8px 0 6px}
 .role{font-size:13.5px;font-weight:600;color:var(--blue);margin-bottom:10px;display:block}
+[data-theme="dark"] .role{color:var(--sky)}
 .tl-item p{color:var(--ink-2);line-height:1.68;font-size:15.5px}
 .sticky-shot{position:sticky;top:100px}
 .sticky-shot .shot{aspect-ratio:3/4}
 .cap{font-size:13px;color:var(--ink-2);margin-top:12px;line-height:1.5}
 
-/* TROPHY BANNER */
 .tro{position:relative;border-radius:28px;overflow:hidden;color:#fff;margin-bottom:26px;min-height:420px;display:flex;align-items:flex-end}
 .tro img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
-.tro::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,10,40,.05) 30%,rgba(4,10,40,.88))}
-.tro-in{position:relative;z-index:1;padding:36px;max-width:640px}
-.tro-in h3{font-size:clamp(26px,3.6vw,38px);margin-bottom:12px}
-.tro-in p{font-size:16px;line-height:1.6;opacity:.92}
+.tro::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,10,40,.05) 30%,rgba(4,10,40,.9))}
+.tro-in{position:relative;z-index:1;padding:36px;max-width:660px}
+.tro-in h3{font-size:clamp(24px,3.4vw,38px);margin-bottom:12px}
+.tro-in p{font-size:16px;line-height:1.6;opacity:.93}
 .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.28);padding:7px 14px;border-radius:999px;font-size:12.5px;font-weight:600;letter-spacing:.04em;margin-bottom:14px}
 
 .hobbies{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -223,21 +265,21 @@ section{padding:90px 0}
 .hob::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 12%,rgba(255,255,255,.26),transparent 55%)}
 .hob>*{position:relative;z-index:1}
 .hob .ic{font-size:30px;margin-bottom:auto}
-.hob h3{font-size:22px;margin-bottom:9px}
+.hob h3{font-size:21px;margin-bottom:9px}
 .hob p{font-size:14.5px;line-height:1.6;opacity:.94}
 .h1x{background:linear-gradient(150deg,#08153f,var(--blue))}
 .h2x{background:linear-gradient(150deg,var(--violet),var(--pink))}
 .h3x{background:linear-gradient(150deg,#036e86,var(--sky))}
 
-.date-sec{background:#fff;border-block:1px solid var(--line)}
+.date-sec{background:var(--surface);border-block:1px solid var(--line)}
 .date-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
 .date-grid p{color:var(--ink-2);font-size:17px;line-height:1.76;margin-bottom:18px}
 .ablist{list-style:none;display:grid;gap:12px}
-.ablist li{display:flex;gap:13px;align-items:flex-start;border:1px solid var(--line);border-radius:15px;padding:16px 18px;background:var(--paper)}
-.ablist .k{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;font-size:14px;flex:0 0 28px;background:rgba(11,99,214,.1)}
+.ablist li{display:flex;gap:13px;align-items:flex-start;border:1px solid var(--line);border-radius:15px;padding:16px 18px;background:var(--surface-2)}
+.ablist .k{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;font-size:14px;flex:0 0 28px;background:rgba(11,99,214,.12)}
 .ablist b{display:block;font-size:15px;margin-bottom:3px;font-family:'Space Grotesk'}
 .ablist span{font-size:14px;color:var(--ink-2);line-height:1.55}
-.factbox{border-radius:18px;padding:22px;background:linear-gradient(135deg,rgba(11,99,214,.07),rgba(34,201,242,.09));margin-top:14px}
+.factbox{border-radius:18px;padding:22px;background:linear-gradient(135deg,rgba(11,99,214,.1),rgba(34,201,242,.12));margin-top:14px}
 .factbox b{font-family:'Space Grotesk';font-size:15px;display:block;margin-bottom:8px}
 .factbox p{font-size:15px;margin:0}
 .date-shot .shot{aspect-ratio:4/5;margin-bottom:20px}
@@ -246,23 +288,26 @@ section{padding:90px 0}
 .cta-box{position:relative;border-radius:32px;padding:70px 48px;text-align:center;overflow:hidden;background:linear-gradient(135deg,#08153f,#0b63d6 48%,#22c9f2);color:#fff;box-shadow:var(--shadow)}
 .cta-box::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 12%,rgba(255,184,0,.5),transparent 45%)}
 .cta-box>*{position:relative;z-index:1}
-.cta-box h2{font-size:clamp(32px,4.6vw,52px);margin-bottom:18px}
-.cta-box p{opacity:.92;font-size:18px;max-width:48ch;margin:0 auto 30px;line-height:1.6}
-.btn-light{background:#fff;color:var(--ink)}
+.cta-box .eyebrow{color:#fff;opacity:.85}
+.cta-box .eyebrow::before{background:#fff}
+.cta-box h2{font-size:clamp(28px,4.4vw,52px);margin-bottom:18px}
+.cta-box p{opacity:.93;font-size:18px;max-width:48ch;margin:0 auto 30px;line-height:1.6}
+.btn-light{background:#fff;color:#0b1024}
 .btn-light:hover{transform:translateY(-2px);box-shadow:0 16px 32px -14px rgba(0,0,0,.5)}
 .btn-outline{border-color:rgba(255,255,255,.55);color:#fff}
 .btn-outline:hover{border-color:#fff;transform:translateY(-2px)}
 .cta-btns{display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
 
-footer{border-top:1px solid var(--line);padding:38px 0;background:#fff}
+footer{border-top:1px solid var(--line);padding:38px 0;background:var(--surface)}
 .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:14.5px;color:var(--ink-2)}
 .socials{display:flex;gap:10px;align-items:center}
 .soc{height:38px;padding:0 16px;border-radius:11px;border:1px solid var(--line);display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;transition:.2s}
-.soc:hover{background:var(--ink);color:#fff;border-color:var(--ink);transform:translateY(-2px)}
+.soc:hover{background:var(--ink);color:var(--on-ink);border-color:var(--ink);transform:translateY(-2px)}
 
 .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
 .rv.in{opacity:1;transform:none}
 
+@media(max-width:1080px){.nav-links{gap:18px;font-size:14px}}
 @media(max-width:980px){.statgrid{grid-template-columns:repeat(2,1fr)}.hobbies{grid-template-columns:1fr}}
 @media(max-width:900px){
   .hero-grid{grid-template-columns:1fr;gap:44px}
@@ -272,8 +317,8 @@ footer{border-top:1px solid var(--line);padding:38px 0;background:#fff}
   .cards{grid-template-columns:1fr}
   .date-shot .shot{max-width:420px}
 }
-@media(max-width:720px){
-  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#fff;border-bottom:1px solid var(--line);padding:8px 24px 20px}
+@media(max-width:820px){
+  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--surface);border-bottom:1px solid var(--line);padding:8px 24px 20px}
   .nav-links.open{display:flex}
   .nav-links a{padding:14px 0;border-bottom:1px solid var(--line)}
   .nav-links .btn{margin-top:14px;justify-content:center;border-bottom:0}
@@ -283,9 +328,12 @@ footer{border-top:1px solid var(--line);padding:38px 0;background:#fff}
   .chip-a{left:-6px}.chip-b{right:-6px}
   .cta-box{padding:54px 26px}
   .tro-in{padding:26px}
+  .langsw button{padding:6px 8px;font-size:11.5px}
+}
+@media(max-width:420px){
+  .brand span:not(.mark){display:none}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
-.vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 </style>
 <noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
 </head>
@@ -293,252 +341,234 @@ footer{border-top:1px solid var(--line);padding:38px 0;background:#fff}
 
 <header class="nav" id="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="#top"><span class="mark">11</span> Ivan Baisa</a>
+    <a class="brand" href="#top"><span class="mark">11</span> <span>Ivan Baisa</span></a>
     <nav class="nav-links" id="menu">
-      <a href="#stats">Stats</a>
-      <a href="#career">Career</a>
-      <a href="#trophies">Trophies</a>
-      <a href="#life">Off the pitch</a>
-      <a class="btn btn-primary" href="#about-me">About me</a>
+      <a href="#stats" data-i18n="nav.stats">Stats</a>
+      <a href="#career" data-i18n="nav.career">Career</a>
+      <a href="#trophies" data-i18n="nav.trophies">Trophies</a>
+      <a href="#life" data-i18n="nav.life">Off the pitch</a>
+      <a class="btn btn-primary" href="#about-me" data-i18n="nav.about">About me</a>
     </nav>
-    <button class="nav-toggle" id="toggle" aria-label="Menu" aria-expanded="false">☰</button>
+    <div class="nav-tools">
+      <div class="langsw" id="langsw" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="cs" aria-pressed="false">CZ</button>
+        <button type="button" data-lang="uk" aria-pressed="false">UA</button>
+      </div>
+      <button class="themebtn" id="themebtn" aria-label="Toggle dark mode">
+        <svg class="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <button class="nav-toggle" id="toggle" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
   </div>
 </header>
 
-<!-- HERO -->
 <div class="hero" id="top">
   <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
   <div class="wrap hero-grid">
     <div class="rv">
-      <span class="eyebrow">No. 11 · Prague, Czech Republic</span>
-      <h1>Ivan Baisa.<br><span class="hl">Number eleven.</span></h1>
-      <p class="lede">Attacking midfielder in Prague, Czech Republic. Superliga malý fotbal champion and VEKRA Superfinále winner in 2026 — plus eleven-a-side on the weekends. Football is most of the week. The rest of this page is the other part.</p>
+      <span class="eyebrow" data-i18n="hero.eyebrow">No. 11 · Prague, Czech Republic</span>
+      <h1>Ivan Baisa.<br><span class="hl" data-i18n="hero.h1b">Number eleven.</span></h1>
+      <p class="lede" data-i18n="hero.lede">Attacking midfielder in Prague, Czech Republic. Superliga malý fotbal champion and VEKRA Superfinále winner in 2026 — plus eleven-a-side on the weekends. Football is most of the week. The rest of this page is the other part.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#stats">See the numbers →</a>
-        <a class="btn btn-ig" href="https://www.instagram.com/0x_qivn?igsh=MW1ibGF6em56N2E2dg==" target="_blank" rel="noopener">Follow on Instagram</a>
+        <a class="btn btn-primary" href="#stats" data-i18n="hero.cta1">See the numbers →</a>
+        <a class="btn btn-ig" href="https://www.instagram.com/0x_qivn?igsh=MW1ibGF6em56N2E2dg==" target="_blank" rel="noopener" data-i18n="hero.cta2">Follow on Instagram</a>
       </div>
       <div class="meta">
-        <span><b>No. 11</b>Squad number</span>
-        <span><b>Midfield</b>Position</span>
-        <span><b>Prague</b>Based in</span>
-        <span><b>2 titles</b>2025/26 season</span>
+        <span><b data-i18n="hero.m1v">No. 11</b><span data-i18n="hero.m1l">Squad number</span></span>
+        <span><b data-i18n="hero.m2v">Midfield</b><span data-i18n="hero.m2l">Position</span></span>
+        <span><b data-i18n="hero.m3v">Prague</b><span data-i18n="hero.m3l">Based in</span></span>
+        <span><b data-i18n="hero.m4v">2 titles</b><span data-i18n="hero.m4l">2025/26 season</span></span>
       </div>
     </div>
     <div class="rv">
       <div class="shot hero-shot">
-        <img src="match-prague.jpg" alt="Ivan Baisa shielding the ball in a match in Prague, wearing the navy number 11 shirt" width="1143" height="935" decoding="async" loading="eager" fetchpriority="high">
-        <div class="chip chip-a"><span class="sq" style="background:rgba(11,99,214,.12)">⚽</span><span>142 goals<small>career total</small></span></div>
-        <div class="chip chip-b"><span class="sq" style="background:rgba(34,201,242,.16)">🅰</span><span>103 assists<small>career total</small></span></div>
+        <img src="match-prague.jpg" data-i18n-alt="img.match" alt="Ivan Baisa shielding the ball in a match in Prague, wearing the navy number 11 shirt" width="1143" height="935" decoding="async" loading="eager" fetchpriority="high">
+        <div class="chip chip-a"><span class="sq" style="background:rgba(11,99,214,.14)">⚽</span><span><span data-i18n="chip.goals">142 goals</span><small data-i18n="chip.total">career total</small></span></div>
+        <div class="chip chip-b"><span class="sq" style="background:rgba(34,201,242,.18)">🅰</span><span><span data-i18n="chip.assists">103 assists</span><small data-i18n="chip.total">career total</small></span></div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="marquee">
-  <div class="marquee-track">
-    <span>Attacking midfield</span><span>Malý fotbal</span><span>Superliga</span><span>Set pieces</span><span>Prague</span><span>No. 11</span>
-    <span>Attacking midfield</span><span>Malý fotbal</span><span>Superliga</span><span>Set pieces</span><span>Prague</span><span>No. 11</span>
-  </div>
-</div>
+<div class="marquee"><div class="marquee-track" id="marquee"></div></div>
 
-<!-- STATS -->
 <section id="stats">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">By the numbers</span>
-      <h2>142 goals. 103 assists. Eleven seasons.</h2>
-      <p>Totals across youth football, eleven-a-side league football and Superliga malý fotbal since 2015. Assists counted only where officially recorded.</p>
+      <span class="eyebrow" data-i18n="stats.eyebrow">By the numbers</span>
+      <h2 data-i18n="stats.h2">142 goals. 103 assists. Eleven seasons.</h2>
+      <p data-i18n="stats.p">Totals across youth football, eleven-a-side league football and Superliga malý fotbal since 2015. Assists counted only where officially recorded.</p>
     </div>
     <div class="statgrid">
-      <div class="stat s1 rv"><b>142</b><span>Career goals</span><i>Across 268 appearances</i></div>
-      <div class="stat s2 rv"><b>103</b><span>Career assists</span><i>Best season: 21 in 2025/26</i></div>
-      <div class="stat s3 rv"><b>5</b><span>Trophies won</span><i>Three of them in 2026</i></div>
-      <div class="stat s4 rv"><b>0.91</b><span>Goal contributions / game</span><i>Career average</i></div>
+      <div class="stat s1 rv"><b>142</b><span data-i18n="stats.s1">Career goals</span><i data-i18n="stats.s1i">Across 268 appearances</i></div>
+      <div class="stat s2 rv"><b>103</b><span data-i18n="stats.s2">Career assists</span><i data-i18n="stats.s2i">Best season: 21 in 2025/26</i></div>
+      <div class="stat s3 rv"><b>5</b><span data-i18n="stats.s3">Trophies won</span><i data-i18n="stats.s3i">Three of them in 2026</i></div>
+      <div class="stat s4 rv"><b>0.91</b><span data-i18n="stats.s4">Goal contributions / game</span><i data-i18n="stats.s4i">Career average</i></div>
     </div>
-
     <div class="cards" style="margin-top:24px">
-      <article class="card c1 rv">
-        <div class="bar"></div><span class="num">FACT 01</span>
-        <h3>Top scorer and top assister in the same season</h3>
-        <p>In 2025/26 he finished the Superliga campaign with 26 goals and 21 assists — the only player in the division to top both charts in one season. 47 goal contributions in 30 matches.</p>
-        <div class="tags"><span class="tag gold">Golden Boot 2026</span><span class="tag">Playmaker of the season</span></div>
+      <article class="card c1 rv"><div class="bar"></div><span class="num" data-i18n="fact.n1">FACT 01</span>
+        <h3 data-i18n="fact.h1">Top scorer and top assister in the same season</h3>
+        <p data-i18n="fact.p1">In 2025/26 he finished the Superliga campaign with 26 goals and 21 assists — the only player in the division to top both charts in one season. 47 goal contributions in 30 matches.</p>
+        <div class="tags"><span class="tag gold" data-i18n="fact.t1a">Golden Boot 2026</span><span class="tag" data-i18n="fact.t1b">Playmaker of the season</span></div>
       </article>
-      <article class="card c2 rv">
-        <div class="bar"></div><span class="num">FACT 02</span>
-        <h3>Two trophies from one season</h3>
-        <p>1. místo Superliga Muži and 1. místo Superliga U23, both for 2025/26 — men's and under-23 titles won in the same year. Then the Superfinále on top of it.</p>
+      <article class="card c2 rv"><div class="bar"></div><span class="num" data-i18n="fact.n2">FACT 02</span>
+        <h3 data-i18n="fact.h2">Two trophies from one season</h3>
+        <p data-i18n="fact.p2">1. místo Superliga Muži and 1. místo Superliga U23, both for 2025/26 — men's and under-23 titles won in the same year. Then the Superfinále on top of it.</p>
         <div class="tags"><span class="tag gold">Superliga Muži 2025/26</span><span class="tag gold">Superliga U23 2025/26</span></div>
       </article>
-      <article class="card c3 rv">
-        <div class="bar"></div><span class="num">FACT 03</span>
-        <h3>Set pieces are the specialty</h3>
-        <p>Seven direct free-kick goals last season and 24 assists from dead balls over the last three years. If it's within 25 metres and slightly left of centre, he's taking it.</p>
-        <div class="tags"><span class="tag">Free kicks</span><span class="tag">Corners</span></div>
+      <article class="card c3 rv"><div class="bar"></div><span class="num" data-i18n="fact.n3">FACT 03</span>
+        <h3 data-i18n="fact.h3">Set pieces are the specialty</h3>
+        <p data-i18n="fact.p3">Seven direct free-kick goals last season and 24 assists from dead balls over the last three years. If it's within 25 metres and slightly left of centre, he's taking it.</p>
+        <div class="tags"><span class="tag" data-i18n="fact.t3a">Free kicks</span><span class="tag" data-i18n="fact.t3b">Corners</span></div>
       </article>
-      <article class="card c4 rv">
-        <div class="bar"></div><span class="num">FACT 04</span>
-        <h3>268 appearances, zero red cards</h3>
-        <p>Eighteen yellows in eleven years and never sent off. For a midfielder who takes the ball in traffic every single week, staying on the pitch is its own kind of statistic.</p>
-        <div class="tags"><span class="tag">Fair play</span><span class="tag">11 seasons</span></div>
+      <article class="card c4 rv"><div class="bar"></div><span class="num" data-i18n="fact.n4">FACT 04</span>
+        <h3 data-i18n="fact.h4">268 appearances, zero red cards</h3>
+        <p data-i18n="fact.p4">Eighteen yellows in eleven years and never sent off. For a midfielder who takes the ball in traffic every single week, staying on the pitch is its own kind of statistic.</p>
+        <div class="tags"><span class="tag" data-i18n="fact.t4a">Fair play</span><span class="tag" data-i18n="fact.t4b">11 seasons</span></div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- CAREER -->
 <section class="career" id="career">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">Career</span>
-      <h2>Eleven years. Same number on the back.</h2>
-      <p>Started at nine years old. Went from winger to the middle at fourteen and never moved again.</p>
+      <span class="eyebrow" data-i18n="car.eyebrow">Career</span>
+      <h2 data-i18n="car.h2">Eleven years. Same number on the back.</h2>
+      <p data-i18n="car.p">Started at nine years old. Went from winger to the middle at fourteen and never moved again.</p>
     </div>
     <div class="career-grid">
       <div class="tl">
-        <div class="tl-item rv">
-          <span class="yr">2015 — 2018</span>
-          <h3>Youth football</h3>
-          <span class="role">U13 → U15 · Midfielder</span>
-          <p>Three years of fundamentals. Moved inside from the wing at fourteen after a coach noticed he passed better than he dribbled. 34 goals and 29 assists across the age groups.</p>
-        </div>
-        <div class="tl-item rv">
-          <span class="yr">2018 — 2021</span>
-          <h3>Youth league</h3>
-          <span class="role">U17 → U19 · Attacking midfielder</span>
-          <p>First competitive league football and the first winner's medal — a U19 winter cup in 2020. Finished second in the league the following season. 41 goals, 28 assists in 88 matches.</p>
-        </div>
-        <div class="tl-item rv">
-          <span class="yr">2021 — now</span>
-          <h3>Eleven-a-side · Prague</h3>
-          <span class="role">No. 11 · Attacking midfielder</span>
-          <p>Weekend league football on grass in and around Prague. Still the number 11, still taking the free kicks, still the one dropping into the pocket to turn and pick the pass forward.</p>
-        </div>
-        <div class="tl-item rv">
-          <span class="yr">2024 — now</span>
-          <h3>Superliga malý fotbal</h3>
-          <span class="role">Attacking midfielder · Champion 2025/26</span>
-          <p>Small-sided football at national level, which suits him: tighter spaces, faster decisions, more of the ball. Won the men's and U23 titles in 2025/26 and lifted the VEKRA Superfinále in June 2026.</p>
-        </div>
+        <div class="tl-item rv"><span class="yr">2015 — 2018</span>
+          <h3 data-i18n="car.h3a">Youth football</h3><span class="role" data-i18n="car.ra">U13 → U15 · Midfielder</span>
+          <p data-i18n="car.pa">Three years of fundamentals. Moved inside from the wing at fourteen after a coach noticed he passed better than he dribbled. 34 goals and 29 assists across the age groups.</p></div>
+        <div class="tl-item rv"><span class="yr">2018 — 2021</span>
+          <h3 data-i18n="car.h3b">Youth league</h3><span class="role" data-i18n="car.rb">U17 → U19 · Attacking midfielder</span>
+          <p data-i18n="car.pb">First competitive league football and the first winner's medal — a U19 winter cup in 2020. Finished second in the league the following season. 41 goals, 28 assists in 88 matches.</p></div>
+        <div class="tl-item rv"><span class="yr" data-i18n="car.yc">2021 — now</span>
+          <h3 data-i18n="car.h3c">Eleven-a-side · Prague</h3><span class="role" data-i18n="car.rc">No. 11 · Attacking midfielder</span>
+          <p data-i18n="car.pc">Weekend league football on grass in and around Prague. Still the number 11, still taking the free kicks, still the one dropping into the pocket to turn and pick the pass forward.</p></div>
+        <div class="tl-item rv"><span class="yr" data-i18n="car.yd">2024 — now</span>
+          <h3 data-i18n="car.h3d">Superliga malý fotbal</h3><span class="role" data-i18n="car.rd">Attacking midfielder · Champion 2025/26</span>
+          <p data-i18n="car.pd">Small-sided football at national level, which suits him: tighter spaces, faster decisions, more of the ball. Won the men's and U23 titles in 2025/26 and lifted the VEKRA Superfinále in June 2026.</p></div>
       </div>
       <div class="sticky-shot rv">
-        <div class="shot"><img src="running.jpg" alt="Ivan Baisa driving forward with the ball on an autumn pitch" width="1206" height="798" decoding="async" loading="lazy"></div>
-        <p class="cap">Carrying the ball out of midfield — the part of the game he'd play all day if someone let him.</p>
+        <div class="shot"><img src="running.jpg" data-i18n-alt="img.run" alt="Ivan Baisa driving forward with the ball on an autumn pitch" width="1206" height="798" decoding="async" loading="lazy"></div>
+        <p class="cap" data-i18n="car.cap">Carrying the ball out of midfield — the part of the game he'd play all day if someone let him.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TROPHIES -->
 <section id="trophies">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">Trophy cabinet</span>
-      <h2>Five trophies. Three of them in one summer.</h2>
+      <span class="eyebrow" data-i18n="tro.eyebrow">Trophy cabinet</span>
+      <h2 data-i18n="tro.h2">Five trophies. Three of them in one summer.</h2>
     </div>
 
     <div class="tro rv">
-      <img src="superfinale.jpg" alt="Ivan Baisa on stage at the VEKRA Superfinále 2026 holding two trophies" width="987" height="1400" decoding="async" loading="lazy">
+      <img src="superfinale.jpg" data-i18n-alt="img.sf" alt="Ivan Baisa on stage at the VEKRA Superfinále 2026 holding two trophies" width="987" height="1400" decoding="async" loading="lazy">
       <div class="tro-in">
         <span class="badge">🏆 20. 6. 2026 · VEKRA Superfinále</span>
-        <h3>Superfinále 2026</h3>
-        <p>The final day of the malý fotbal season, in front of the big screen and a very wet stage. Two cups in hand, medal round the neck, and the only photo from the whole year he actually likes.</p>
+        <h3 data-i18n="tro.b1h">Superfinále 2026</h3>
+        <p data-i18n="tro.b1p">The final day of the malý fotbal season, in front of the big screen and a very wet stage. Two cups in hand, medal round the neck, and the only photo from the whole year he actually likes.</p>
       </div>
     </div>
 
     <div class="cards">
       <article class="card c2 rv"><div class="bar"></div><span class="num">🏆 2025/26</span>
-        <h3>Superliga Muži — 1. místo</h3>
-        <p>The men's national title. 30 matches, 26 goals, 21 assists, and top of the table with two rounds still to play. His best season by every number that gets counted.</p>
-        <div class="tags"><span class="tag gold">Champions</span><span class="tag">26 goals · 21 assists</span></div>
+        <h3 data-i18n="tro.c1h">Superliga Muži — 1. místo</h3>
+        <p data-i18n="tro.c1p">The men's national title. 30 matches, 26 goals, 21 assists, and top of the table with two rounds still to play. His best season by every number that gets counted.</p>
+        <div class="tags"><span class="tag gold" data-i18n="tro.win">Champions</span><span class="tag" data-i18n="tro.c1t">26 goals · 21 assists</span></div>
       </article>
       <article class="card c3 rv"><div class="bar"></div><span class="num">🏆 2025/26</span>
-        <h3>Superliga U23 — 1. místo</h3>
-        <p>The under-23 title in the same season, won with largely the same group of players. Two league trophies, one squad, one year.</p>
-        <div class="tags"><span class="tag gold">Champions</span><span class="tag">Double season</span></div>
+        <h3 data-i18n="tro.c2h">Superliga U23 — 1. místo</h3>
+        <p data-i18n="tro.c2p">The under-23 title in the same season, won with largely the same group of players. Two league trophies, one squad, one year.</p>
+        <div class="tags"><span class="tag gold" data-i18n="tro.win">Champions</span><span class="tag" data-i18n="tro.c2t">Double season</span></div>
       </article>
       <article class="card c1 rv"><div class="bar"></div><span class="num">🏆 2026</span>
-        <h3>VEKRA Superfinále</h3>
-        <p>Knockout football across one weekend in June, decided on a soaked pitch under a storm. Two assists in the final, both from set pieces, and the biggest cup of the three.</p>
-        <div class="tags"><span class="tag gold">Winner</span><span class="tag">2 assists in the final</span></div>
+        <h3 data-i18n="tro.c3h">VEKRA Superfinále</h3>
+        <p data-i18n="tro.c3p">Knockout football across one weekend in June, decided on a soaked pitch under a storm. Two assists in the final, both from set pieces, and the biggest cup of the three.</p>
+        <div class="tags"><span class="tag gold" data-i18n="tro.winner">Winner</span><span class="tag" data-i18n="tro.c3t">2 assists in the final</span></div>
       </article>
       <article class="card c4 rv"><div class="bar"></div><span class="num">🏆 2020</span>
-        <h3>U19 winter cup</h3>
-        <p>The first one, and still the one that felt biggest at the time. Won the final 2–1 — scored the opener, set up the winner in the 88th minute, six goals across the tournament.</p>
-        <div class="tags"><span class="tag gold">Winner</span><span class="tag">6 goals · 4 assists</span></div>
+        <h3 data-i18n="tro.c4h">U19 winter cup</h3>
+        <p data-i18n="tro.c4p">The first one, and still the one that felt biggest at the time. Won the final 2–1 — scored the opener, set up the winner in the 88th minute, six goals across the tournament.</p>
+        <div class="tags"><span class="tag gold" data-i18n="tro.winner">Winner</span><span class="tag" data-i18n="tro.c4t">6 goals · 4 assists</span></div>
       </article>
     </div>
 
     <div class="tro rv" style="margin-top:26px;min-height:460px">
-      <img src="trophies.jpg" alt="Ivan Baisa in the changing room with the Superfinále cup and both Superliga trophies" width="941" height="1400" decoding="async" loading="lazy">
+      <img src="trophies.jpg" data-i18n-alt="img.tro" alt="Ivan Baisa in the changing room with the Superfinále cup and both Superliga trophies" width="941" height="1400" decoding="async" loading="lazy">
       <div class="tro-in">
-        <span class="badge">🥇 Changing room · June 2026</span>
-        <h3>All three, five minutes after full time</h3>
-        <p>Superliga Muži on one side, Superliga U23 on the other, Superfinále in the middle. Boots off, medal between the teeth, still no idea what to say.</p>
+        <span class="badge" data-i18n="tro.b2badge">🥇 Changing room · June 2026</span>
+        <h3 data-i18n="tro.b2h">All three, five minutes after full time</h3>
+        <p data-i18n="tro.b2p">Superliga Muži on one side, Superliga U23 on the other, Superfinále in the middle. Boots off, medal between the teeth, still no idea what to say.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- HOBBIES -->
-<section id="life" style="background:#fff;border-block:1px solid var(--line)">
+<section id="life" style="background:var(--surface);border-block:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">Off the pitch</span>
-      <h2>Three things that fill the rest of the week.</h2>
-      <p>Football takes five evenings. Here's what happens in the gaps.</p>
+      <span class="eyebrow" data-i18n="hob.eyebrow">Off the pitch</span>
+      <h2 data-i18n="hob.h2">Three things that fill the rest of the week.</h2>
+      <p data-i18n="hob.p">Football takes five evenings. Here's what happens in the gaps.</p>
     </div>
     <div class="hobbies">
-      <div class="hob h1x rv"><span class="ic">🏋️</span><h3>Gym</h3><p>Five sessions a week, built around explosiveness rather than size. Lower body Monday and Thursday, upper Tuesday and Friday, mobility on Sunday. Never skips legs — it's the job.</p></div>
-      <div class="hob h2x rv"><span class="ic">🎮</span><h3>Gaming</h3><p>FC and Warzone, mostly with the same four people since school. Career mode taken far too seriously — currently eight seasons into a save rebuilding a team from the fourth division.</p></div>
-      <div class="hob h3x rv"><span class="ic">🎧</span><h3>Music</h3><p>Makes the pre-match playlist for the whole squad, which is a bigger responsibility than the armband. Hip-hop and afrobeats before games, something slower on the drive home.</p></div>
+      <div class="hob h1x rv"><span class="ic">🏋️</span><h3 data-i18n="hob.h1">Gym</h3><p data-i18n="hob.p1">Five sessions a week, built around explosiveness rather than size. Lower body Monday and Thursday, upper Tuesday and Friday, mobility on Sunday. Never skips legs — it's the job.</p></div>
+      <div class="hob h2x rv"><span class="ic">🎮</span><h3 data-i18n="hob.h3b">Gaming</h3><p data-i18n="hob.p2">FC and Warzone, mostly with the same four people since school. Career mode taken far too seriously — currently eight seasons into a save rebuilding a team from the fourth division.</p></div>
+      <div class="hob h3x rv"><span class="ic">🎧</span><h3 data-i18n="hob.h3c">Music</h3><p data-i18n="hob.p3">Makes the pre-match playlist for the whole squad, which is a bigger responsibility than the armband. Hip-hop and afrobeats before games, something slower on the drive home.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT ME -->
 <section class="date-sec" id="about-me">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">A bit more personal</span>
-      <h2>About me, honestly.</h2>
-      <p>The rest of this page is football. This part isn't.</p>
+      <span class="eyebrow" data-i18n="ab.eyebrow">A bit more personal</span>
+      <h2 data-i18n="ab.h2">About me, honestly.</h2>
+      <p data-i18n="ab.p">The rest of this page is football. This part isn't.</p>
     </div>
     <div class="date-grid">
       <div class="rv">
-        <p>My name is Ivan Baisa — Baisa Ivan if you're reading it the other way round. I've played football since I was nine, and most people meet me through it. But there's more to me than the number on my back.</p>
-        <p>I'm calm, I listen more than I talk, and I'm loyal to a fault — the people close to me have been close to me for years. Sport taught me discipline and how to lose properly, and both of those matter as much off the pitch as on it.</p>
-        <p>I'm looking for something real, not something casual. Someone to cook dinner with on a Sunday, travel with in the off-season, and be quiet around without it feeling awkward. Someone with her own thing going on — a career, a passion, a plan — because I have mine and I'd rather we both brought something.</p>
-        <p>If that sounds like you, message me on Instagram. I'd rather have one good conversation than a hundred matches.</p>
+        <p data-i18n="ab.p1">My name is Ivan Baisa — Baisa Ivan if you're reading it the other way round. I've played football since I was nine, and most people meet me through it. But there's more to me than the number on my back.</p>
+        <p data-i18n="ab.p2">I'm calm, I listen more than I talk, and I'm loyal to a fault — the people close to me have been close to me for years. Sport taught me discipline and how to lose properly, and both of those matter as much off the pitch as on it.</p>
+        <p data-i18n="ab.p3">I'm looking for something real, not something casual. Someone to cook dinner with on a Sunday, travel with in the off-season, and be quiet around without it feeling awkward. Someone with her own thing going on — a career, a passion, a plan — because I have mine and I'd rather we both brought something.</p>
+        <p data-i18n="ab.p4">If that sounds like you, message me on Instagram. I'd rather have one good conversation than a hundred matches.</p>
         <div class="factbox">
-          <b>Fair warning</b>
-          <p>Saturdays are match days from August to June, and I train five evenings a week. I will not be answering my phone. Everything else is negotiable.</p>
+          <b data-i18n="ab.fb">Fair warning</b>
+          <p data-i18n="ab.fp">Saturdays are match days from August to June, and I train five evenings a week. I will not be answering my phone. Everything else is negotiable.</p>
         </div>
       </div>
       <div class="rv date-shot">
-        <div class="shot"><img src="beach.jpg" alt="Ivan Baisa by the sea during the off-season" width="1161" height="1164" decoding="async" loading="lazy"></div>
+        <div class="shot"><img src="beach.jpg" data-i18n-alt="img.beach" alt="Ivan Baisa by the sea during the off-season" width="1161" height="1164" decoding="async" loading="lazy"></div>
         <ul class="ablist">
-          <li><span class="k">📍</span><div><b>Where I'm at</b><span>Based in Prague · training five days a week · free most evenings after eight.</span></div></li>
-          <li><span class="k">💬</span><div><b>What I'm like</b><span>Calm, direct, dry sense of humour. Bad at small talk, good at the conversation after it.</span></div></li>
-          <li><span class="k">❤️</span><div><b>What I'm looking for</b><span>Something serious. Someone kind, independent and honest — the rest we can figure out.</span></div></li>
-          <li><span class="k">🍳</span><div><b>A good first date</b><span>Cooking something together, or a long walk and coffee. Not a loud bar.</span></div></li>
-          <li><span class="k">🚩</span><div><b>Dealbreakers</b><span>Dishonesty, and people who are unkind to waiters. That's the whole list.</span></div></li>
-          <li><span class="k">✈️</span><div><b>Off-season plan</b><span>Two weeks somewhere warm every summer. Company welcome.</span></div></li>
+          <li><span class="k">📍</span><div><b data-i18n="ab.l1b">Where I'm at</b><span data-i18n="ab.l1s">Based in Prague · training five days a week · free most evenings after eight.</span></div></li>
+          <li><span class="k">💬</span><div><b data-i18n="ab.l2b">What I'm like</b><span data-i18n="ab.l2s">Calm, direct, dry sense of humour. Bad at small talk, good at the conversation after it.</span></div></li>
+          <li><span class="k">❤️</span><div><b data-i18n="ab.l3b">What I'm looking for</b><span data-i18n="ab.l3s">Something serious. Someone kind, independent and honest — the rest we can figure out.</span></div></li>
+          <li><span class="k">🍳</span><div><b data-i18n="ab.l4b">A good first date</b><span data-i18n="ab.l4s">Cooking something together, or a long walk and coffee. Not a loud bar.</span></div></li>
+          <li><span class="k">🚩</span><div><b data-i18n="ab.l5b">Dealbreakers</b><span data-i18n="ab.l5s">Dishonesty, and people who are unkind to waiters. That's the whole list.</span></div></li>
+          <li><span class="k">✈️</span><div><b data-i18n="ab.l6b">Off-season plan</b><span data-i18n="ab.l6s">Two weeks somewhere warm every summer. Company welcome.</span></div></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
 <section class="cta" style="padding-top:90px">
   <div class="wrap">
     <div class="cta-box rv">
-      <span class="eyebrow" style="color:#fff;opacity:.85">Say hello</span>
-      <h2>Best place to reach me<br>is Instagram.</h2>
-      <p>Football enquiries, trials, or just a conversation — the DMs are open and I actually read them.</p>
+      <span class="eyebrow" data-i18n="cta.eyebrow">Say hello</span>
+      <h2 data-i18n="cta.h2">Best place to reach me is Instagram.</h2>
+      <p data-i18n="cta.p">Football enquiries, trials, or just a conversation — the DMs are open and I actually read them.</p>
       <div class="cta-btns">
-        <a class="btn btn-light" href="https://www.instagram.com/0x_qivn?igsh=MW1ibGF6em56N2E2dg==" target="_blank" rel="noopener">@0x_qivn on Instagram →</a>
-        <a class="btn btn-outline" href="mailto:hello@example.com">Send an email</a>
+        <a class="btn btn-light" href="https://www.instagram.com/0x_qivn?igsh=MW1ibGF6em56N2E2dg==" target="_blank" rel="noopener">@0x_qivn →</a>
+        <a class="btn btn-outline" href="mailto:hello@example.com" data-i18n="cta.mail">Send an email</a>
       </div>
     </div>
   </div>
@@ -546,30 +576,318 @@ footer{border-top:1px solid var(--line);padding:38px 0;background:#fff}
 
 <footer>
   <div class="wrap foot">
-    <span>© 2026 Ivan Baisa (Baisa Ivan) · fotbalista, Praha · Prague, Czech Republic</span>
+    <span data-i18n="foot.c">© 2026 Ivan Baisa (Baisa Ivan) · fotbalista, Praha · Prague, Czech Republic</span>
     <div class="socials">
       <a class="soc" href="https://www.instagram.com/0x_qivn?igsh=MW1ibGF6em56N2E2dg==" target="_blank" rel="noopener">📷 @0x_qivn</a>
-      <a class="soc" href="mailto:hello@example.com">✉ Email</a>
+      <a class="soc" href="mailto:hello@example.com" data-i18n="foot.mail">✉ Email</a>
     </div>
   </div>
 </footer>
 
 <script>
+const I18N = {
+en:{
+"meta.title":"Ivan Baisa — Footballer, No. 11 | Prague, Czech Republic",
+"meta.desc":"Ivan Baisa (Baisa Ivan) — footballer and attacking midfielder in Prague, Czech Republic. Superliga Muži and U23 champion 2025/26, VEKRA Superfinále winner 2026.",
+"nav.stats":"Stats","nav.career":"Career","nav.trophies":"Trophies","nav.life":"Off the pitch","nav.about":"About me",
+"hero.eyebrow":"No. 11 · Prague, Czech Republic","hero.h1b":"Number eleven.",
+"hero.lede":"Attacking midfielder in Prague, Czech Republic. Superliga malý fotbal champion and VEKRA Superfinále winner in 2026 — plus eleven-a-side on the weekends. Football is most of the week. The rest of this page is the other part.",
+"hero.cta1":"See the numbers →","hero.cta2":"Follow on Instagram",
+"hero.m1v":"No. 11","hero.m1l":"Squad number","hero.m2v":"Midfield","hero.m2l":"Position","hero.m3v":"Prague","hero.m3l":"Based in","hero.m4v":"2 titles","hero.m4l":"2025/26 season",
+"chip.goals":"142 goals","chip.assists":"103 assists","chip.total":"career total",
+"mq":["Attacking midfield","Malý fotbal","Superliga","Set pieces","Prague","No. 11"],
+"stats.eyebrow":"By the numbers","stats.h2":"142 goals. 103 assists. Eleven seasons.",
+"stats.p":"Totals across youth football, eleven-a-side league football and Superliga malý fotbal since 2015. Assists counted only where officially recorded.",
+"stats.s1":"Career goals","stats.s1i":"Across 268 appearances","stats.s2":"Career assists","stats.s2i":"Best season: 21 in 2025/26",
+"stats.s3":"Trophies won","stats.s3i":"Three of them in 2026","stats.s4":"Goal contributions / game","stats.s4i":"Career average",
+"fact.n1":"FACT 01","fact.n2":"FACT 02","fact.n3":"FACT 03","fact.n4":"FACT 04",
+"fact.h1":"Top scorer and top assister in the same season",
+"fact.p1":"In 2025/26 he finished the Superliga campaign with 26 goals and 21 assists — the only player in the division to top both charts in one season. 47 goal contributions in 30 matches.",
+"fact.t1a":"Golden Boot 2026","fact.t1b":"Playmaker of the season",
+"fact.h2":"Two trophies from one season",
+"fact.p2":"1. místo Superliga Muži and 1. místo Superliga U23, both for 2025/26 — men's and under-23 titles won in the same year. Then the Superfinále on top of it.",
+"fact.h3":"Set pieces are the specialty",
+"fact.p3":"Seven direct free-kick goals last season and 24 assists from dead balls over the last three years. If it's within 25 metres and slightly left of centre, he's taking it.",
+"fact.t3a":"Free kicks","fact.t3b":"Corners",
+"fact.h4":"268 appearances, zero red cards",
+"fact.p4":"Eighteen yellows in eleven years and never sent off. For a midfielder who takes the ball in traffic every single week, staying on the pitch is its own kind of statistic.",
+"fact.t4a":"Fair play","fact.t4b":"11 seasons",
+"car.eyebrow":"Career","car.h2":"Eleven years. Same number on the back.",
+"car.p":"Started at nine years old. Went from winger to the middle at fourteen and never moved again.",
+"car.h3a":"Youth football","car.ra":"U13 → U15 · Midfielder",
+"car.pa":"Three years of fundamentals. Moved inside from the wing at fourteen after a coach noticed he passed better than he dribbled. 34 goals and 29 assists across the age groups.",
+"car.h3b":"Youth league","car.rb":"U17 → U19 · Attacking midfielder",
+"car.pb":"First competitive league football and the first winner's medal — a U19 winter cup in 2020. Finished second in the league the following season. 41 goals, 28 assists in 88 matches.",
+"car.yc":"2021 — now","car.h3c":"Eleven-a-side · Prague","car.rc":"No. 11 · Attacking midfielder",
+"car.pc":"Weekend league football on grass in and around Prague. Still the number 11, still taking the free kicks, still the one dropping into the pocket to turn and pick the pass forward.",
+"car.yd":"2024 — now","car.h3d":"Superliga malý fotbal","car.rd":"Attacking midfielder · Champion 2025/26",
+"car.pd":"Small-sided football at national level, which suits him: tighter spaces, faster decisions, more of the ball. Won the men's and U23 titles in 2025/26 and lifted the VEKRA Superfinále in June 2026.",
+"car.cap":"Carrying the ball out of midfield — the part of the game he'd play all day if someone let him.",
+"tro.eyebrow":"Trophy cabinet","tro.h2":"Five trophies. Three of them in one summer.",
+"tro.b1h":"Superfinále 2026",
+"tro.b1p":"The final day of the malý fotbal season, in front of the big screen and a very wet stage. Two cups in hand, medal round the neck, and the only photo from the whole year he actually likes.",
+"tro.c1h":"Superliga Muži — 1st place",
+"tro.c1p":"The men's national title. 30 matches, 26 goals, 21 assists, and top of the table with two rounds still to play. His best season by every number that gets counted.",
+"tro.c1t":"26 goals · 21 assists","tro.win":"Champions","tro.winner":"Winner",
+"tro.c2h":"Superliga U23 — 1st place",
+"tro.c2p":"The under-23 title in the same season, won with largely the same group of players. Two league trophies, one squad, one year.",
+"tro.c2t":"Double season","tro.c3h":"VEKRA Superfinále",
+"tro.c3p":"Knockout football across one weekend in June, decided on a soaked pitch under a storm. Two assists in the final, both from set pieces, and the biggest cup of the three.",
+"tro.c3t":"2 assists in the final","tro.c4h":"U19 winter cup",
+"tro.c4p":"The first one, and still the one that felt biggest at the time. Won the final 2–1 — scored the opener, set up the winner in the 88th minute, six goals across the tournament.",
+"tro.c4t":"6 goals · 4 assists","tro.b2badge":"🥇 Changing room · June 2026",
+"tro.b2h":"All three, five minutes after full time",
+"tro.b2p":"Superliga Muži on one side, Superliga U23 on the other, Superfinále in the middle. Boots off, medal between the teeth, still no idea what to say.",
+"hob.eyebrow":"Off the pitch","hob.h2":"Three things that fill the rest of the week.","hob.p":"Football takes five evenings. Here's what happens in the gaps.",
+"hob.h1":"Gym","hob.p1":"Five sessions a week, built around explosiveness rather than size. Lower body Monday and Thursday, upper Tuesday and Friday, mobility on Sunday. Never skips legs — it's the job.",
+"hob.h3b":"Gaming","hob.p2":"FC and Warzone, mostly with the same four people since school. Career mode taken far too seriously — currently eight seasons into a save rebuilding a team from the fourth division.",
+"hob.h3c":"Music","hob.p3":"Makes the pre-match playlist for the whole squad, which is a bigger responsibility than the armband. Hip-hop and afrobeats before games, something slower on the drive home.",
+"ab.eyebrow":"A bit more personal","ab.h2":"About me, honestly.","ab.p":"The rest of this page is football. This part isn't.",
+"ab.p1":"My name is Ivan Baisa — Baisa Ivan if you're reading it the other way round. I've played football since I was nine, and most people meet me through it. But there's more to me than the number on my back.",
+"ab.p2":"I'm calm, I listen more than I talk, and I'm loyal to a fault — the people close to me have been close to me for years. Sport taught me discipline and how to lose properly, and both of those matter as much off the pitch as on it.",
+"ab.p3":"I'm looking for something real, not something casual. Someone to cook dinner with on a Sunday, travel with in the off-season, and be quiet around without it feeling awkward. Someone with her own thing going on — a career, a passion, a plan — because I have mine and I'd rather we both brought something.",
+"ab.p4":"If that sounds like you, message me on Instagram. I'd rather have one good conversation than a hundred matches.",
+"ab.fb":"Fair warning","ab.fp":"Saturdays are match days from August to June, and I train five evenings a week. I will not be answering my phone. Everything else is negotiable.",
+"ab.l1b":"Where I'm at","ab.l1s":"Based in Prague · training five days a week · free most evenings after eight.",
+"ab.l2b":"What I'm like","ab.l2s":"Calm, direct, dry sense of humour. Bad at small talk, good at the conversation after it.",
+"ab.l3b":"What I'm looking for","ab.l3s":"Something serious. Someone kind, independent and honest — the rest we can figure out.",
+"ab.l4b":"A good first date","ab.l4s":"Cooking something together, or a long walk and coffee. Not a loud bar.",
+"ab.l5b":"Dealbreakers","ab.l5s":"Dishonesty, and people who are unkind to waiters. That's the whole list.",
+"ab.l6b":"Off-season plan","ab.l6s":"Two weeks somewhere warm every summer. Company welcome.",
+"cta.eyebrow":"Say hello","cta.h2":"Best place to reach me is Instagram.",
+"cta.p":"Football enquiries, trials, or just a conversation — the DMs are open and I actually read them.","cta.mail":"Send an email",
+"foot.c":"© 2026 Ivan Baisa (Baisa Ivan) · Prague, Czech Republic","foot.mail":"✉ Email",
+"img.match":"Ivan Baisa shielding the ball in a match in Prague, wearing the number 11 shirt",
+"img.run":"Ivan Baisa driving forward with the ball on an autumn pitch",
+"img.sf":"Ivan Baisa on stage at the VEKRA Superfinále 2026 holding two trophies",
+"img.tro":"Ivan Baisa in the changing room with the Superfinále cup and both Superliga trophies",
+"img.beach":"Ivan Baisa by the sea during the off-season"
+},
+cs:{
+"meta.title":"Ivan Baisa — fotbalista, číslo 11 | Praha, Česká republika",
+"meta.desc":"Ivan Baisa (Baisa Ivan) — fotbalista a ofenzivní záložník v Praze. Mistr Superligy mužů i U23 2025/26 a vítěz VEKRA Superfinále 2026. Kariéra, statistiky, trofeje.",
+"nav.stats":"Statistiky","nav.career":"Kariéra","nav.trophies":"Trofeje","nav.life":"Mimo hřiště","nav.about":"O mně",
+"hero.eyebrow":"Číslo 11 · Praha, Česká republika","hero.h1b":"Číslo jedenáct.",
+"hero.lede":"Ofenzivní záložník v Praze. Mistr Superligy malého fotbalu a vítěz VEKRA Superfinále 2026 — k tomu velký fotbal o víkendech. Fotbal zabere většinu týdne. Zbytek téhle stránky je ta druhá část.",
+"hero.cta1":"Podívat se na čísla →","hero.cta2":"Sledovat na Instagramu",
+"hero.m1v":"Číslo 11","hero.m1l":"Číslo dresu","hero.m2v":"Záloha","hero.m2l":"Pozice","hero.m3v":"Praha","hero.m3l":"Bydliště","hero.m4v":"2 tituly","hero.m4l":"Sezóna 2025/26",
+"chip.goals":"142 gólů","chip.assists":"103 asistencí","chip.total":"kariérní součet",
+"mq":["Ofenzivní záloha","Malý fotbal","Superliga","Standardní situace","Praha","Číslo 11"],
+"stats.eyebrow":"V číslech","stats.h2":"142 gólů. 103 asistencí. Jedenáct sezón.",
+"stats.p":"Souhrn z mládežnického fotbalu, ligového velkého fotbalu a Superligy malého fotbalu od roku 2015. Asistence počítané jen tam, kde jsou oficiálně evidované.",
+"stats.s1":"Góly v kariéře","stats.s1i":"Ve 268 zápasech","stats.s2":"Asistence v kariéře","stats.s2i":"Nejlepší sezóna: 21 v 2025/26",
+"stats.s3":"Získané trofeje","stats.s3i":"Tři z nich v roce 2026","stats.s4":"Gólových účastí / zápas","stats.s4i":"Kariérní průměr",
+"fact.n1":"FAKT 01","fact.n2":"FAKT 02","fact.n3":"FAKT 03","fact.n4":"FAKT 04",
+"fact.h1":"Nejlepší střelec i nahrávač v jedné sezóně",
+"fact.p1":"V sezóně 2025/26 zakončil Superligu s 26 góly a 21 asistencemi — jako jediný hráč soutěže vedl obě tabulky zároveň. 47 gólových účastí ve 30 zápasech.",
+"fact.t1a":"Zlatá kopačka 2026","fact.t1b":"Nahrávač sezóny",
+"fact.h2":"Dvě trofeje z jedné sezóny",
+"fact.p2":"1. místo Superliga Muži a 1. místo Superliga U23, obojí za 2025/26 — titul mužů i do 23 let ve stejném roce. A k tomu ještě Superfinále.",
+"fact.h3":"Specialita jsou standardky",
+"fact.p3":"Sedm přímých gólů z volného kopu minulou sezónu a 24 asistencí ze standardních situací za poslední tři roky. Když je to do 25 metrů a kousek nalevo od středu, kope on.",
+"fact.t3a":"Volné kopy","fact.t3b":"Rohy",
+"fact.h4":"268 zápasů, nula červených karet",
+"fact.p4":"Osmnáct žlutých za jedenáct let a ani jednou vyloučen. U záložníka, který bere míč v tlaku každý týden, je zůstat na hřišti taky statistika.",
+"fact.t4a":"Fair play","fact.t4b":"11 sezón",
+"car.eyebrow":"Kariéra","car.h2":"Jedenáct let. Pořád stejné číslo na zádech.",
+"car.p":"Začínal v devíti letech. Ve čtrnácti se přesunul z křídla do středu a už tam zůstal.",
+"car.h3a":"Mládežnický fotbal","car.ra":"U13 → U15 · Záložník",
+"car.pa":"Tři roky základů. Ve čtrnácti přešel z křídla dovnitř, když si trenér všiml, že nahrává líp, než driblue. 34 gólů a 29 asistencí napříč kategoriemi.",
+"car.h3b":"Mládežnická liga","car.rb":"U17 → U19 · Ofenzivní záložník",
+"car.pb":"První soutěžní ligový fotbal a první medaile — zimní pohár U19 v roce 2020. Následující sezónu druhé místo v lize. 41 gólů a 28 asistencí v 88 zápasech.",
+"car.yc":"2021 — dosud","car.h3c":"Velký fotbal · Praha","car.rc":"Číslo 11 · Ofenzivní záložník",
+"car.pc":"Víkendový ligový fotbal na trávě v Praze a okolí. Pořád jedenáctka, pořád kope standardky, pořád ten, co se stáhne do mezery, otočí se a najde nahrávku dopředu.",
+"car.yd":"2024 — dosud","car.h3d":"Superliga malého fotbalu","car.rd":"Ofenzivní záložník · Mistr 2025/26",
+"car.pd":"Malý fotbal na celostátní úrovni mu sedí: těsnější prostor, rychlejší rozhodování, víc míče. V sezóně 2025/26 získal titul mužů i U23 a v červnu 2026 zvedl nad hlavu VEKRA Superfinále.",
+"car.cap":"Vytažení míče ze zálohy — část hry, kterou by hrál celý den, kdyby ho nechali.",
+"tro.eyebrow":"Vitrína s trofejemi","tro.h2":"Pět trofejí. Tři z nich během jednoho léta.",
+"tro.b1h":"Superfinále 2026",
+"tro.b1p":"Poslední den sezóny malého fotbalu, před velkou obrazovkou a na hodně mokrém pódiu. Dva poháry v rukou, medaile na krku a jediná fotka za celý rok, která se mu opravdu líbí.",
+"tro.c1h":"Superliga Muži — 1. místo",
+"tro.c1p":"Celostátní titul mužů. 30 zápasů, 26 gólů, 21 asistencí a první místo dvě kola před koncem. Jeho nejlepší sezóna podle každého čísla, které se počítá.",
+"tro.c1t":"26 gólů · 21 asistencí","tro.win":"Mistři","tro.winner":"Vítěz",
+"tro.c2h":"Superliga U23 — 1. místo",
+"tro.c2p":"Titul do 23 let ve stejné sezóně, získaný v podstatě se stejnou partou hráčů. Dvě ligové trofeje, jeden tým, jeden rok.",
+"tro.c2t":"Dvojitá sezóna","tro.c3h":"VEKRA Superfinále",
+"tro.c3p":"Vyřazovací fotbal během jednoho červnového víkendu, rozhodnutý na promáčeném hřišti pod bouřkou. Dvě asistence ve finále, obě ze standardek, a největší pohár ze všech tří.",
+"tro.c3t":"2 asistence ve finále","tro.c4h":"Zimní pohár U19",
+"tro.c4p":"První trofej a pořád ta, která tehdy působila největší. Finále 2:1 — dal úvodní gól, v 88. minutě připravil vítězný, celkem šest gólů na turnaji.",
+"tro.c4t":"6 gólů · 4 asistence","tro.b2badge":"🥇 Kabina · červen 2026",
+"tro.b2h":"Všechny tři, pět minut po konci",
+"tro.b2p":"Superliga Muži na jedné straně, Superliga U23 na druhé, Superfinále uprostřed. Kopačky dole, medaile v zubech a pořád netuší, co říct.",
+"hob.eyebrow":"Mimo hřiště","hob.h2":"Tři věci, které vyplňují zbytek týdne.","hob.p":"Fotbal zabere pět večerů. Tohle se děje mezi tím.",
+"hob.h1":"Posilovna","hob.p1":"Pět tréninků týdně, stavěných spíš na výbušnost než na objem. Spodní část v pondělí a ve čtvrtek, horní v úterý a v pátek, mobilita v neděli. Nohy nikdy nevynechá — je to práce.",
+"hob.h3b":"Hraní","hob.p2":"FC a Warzone, většinou se stejnou čtveřicí ze školy. Kariérní režim bere až moc vážně — právě je v osmé sezóně save, ve které staví tým ze čtvrté ligy.",
+"hob.h3c":"Hudba","hob.p3":"Dělá předzápasový playlist pro celý tým, což je větší zodpovědnost než kapitánská páska. Hip-hop a afrobeats před zápasem, něco pomalejšího cestou domů.",
+"ab.eyebrow":"Trochu osobněji","ab.h2":"O mně, upřímně.","ab.p":"Zbytek téhle stránky je fotbal. Tahle část ne.",
+"ab.p1":"Jmenuju se Ivan Baisa — Baisa Ivan, pokud to čtete obráceně. Fotbal hraju od devíti let a většina lidí mě přes něj pozná. Ale je toho ve mně víc než číslo na zádech.",
+"ab.p2":"Jsem klidný, víc poslouchám než mluvím, a jsem loajální možná až moc — lidi, které mám blízko, mám blízko roky. Sport mě naučil disciplíně a taky umět prohrát, a obojí platí mimo hřiště stejně jako na něm.",
+"ab.p3":"Hledám něco opravdového, ne nezávazného. Někoho, s kým si v neděli uvařím večeři, s kým vyrazím po sezóně na cesty a s kým můžu být i potichu, aniž by to bylo divné. Někoho, kdo má svoje — kariéru, vášeň, plán — protože já to svoje mám a radši bych, ať oba něco přineseme.",
+"ab.p4":"Jestli to zní jako vy, napište mi na Instagram. Radši jeden dobrý rozhovor než sto matchů.",
+"ab.fb":"Férové varování","ab.fp":"Soboty jsou od srpna do června zápasové a trénuju pět večerů v týdnu. Telefon tehdy neberu. Všechno ostatní je otázka domluvy.",
+"ab.l1b":"Kde jsem","ab.l1s":"Bydlím v Praze · trénuju pět dní v týdnu · většinu večerů volný po osmé.",
+"ab.l2b":"Jaký jsem","ab.l2s":"Klidný, přímý, se suchým humorem. Špatný na small talk, dobrý na rozhovor, který přijde potom.",
+"ab.l3b":"Co hledám","ab.l3s":"Něco vážného. Někoho laskavého, samostatného a upřímného — zbytek už vymyslíme.",
+"ab.l4b":"Dobré první rande","ab.l4s":"Uvařit něco spolu, nebo dlouhá procházka a káva. Ne hlučný bar.",
+"ab.l5b":"Co nejde","ab.l5s":"Nepoctivost a lidi, kteří jsou nepříjemní na číšníky. To je celý seznam.",
+"ab.l6b":"Plán po sezóně","ab.l6s":"Každé léto dva týdny někde v teple. Společnost vítána.",
+"cta.eyebrow":"Ozvěte se","cta.h2":"Nejlíp mě zastihnete na Instagramu.",
+"cta.p":"Fotbalové nabídky, zkoušky, nebo jen tak si napsat — zprávy mám otevřené a opravdu je čtu.","cta.mail":"Poslat e-mail",
+"foot.c":"© 2026 Ivan Baisa (Baisa Ivan) · fotbalista, Praha, Česká republika","foot.mail":"✉ E-mail",
+"img.match":"Ivan Baisa si kryje míč v zápase v Praze v dresu s číslem 11",
+"img.run":"Ivan Baisa vede míč dopředu na podzimním hřišti",
+"img.sf":"Ivan Baisa na pódiu VEKRA Superfinále 2026 se dvěma poháry",
+"img.tro":"Ivan Baisa v kabině s pohárem ze Superfinále a oběma trofejemi ze Superligy",
+"img.beach":"Ivan Baisa u moře po sezóně"
+},
+uk:{
+"meta.title":"Іван Байса — футболіст, номер 11 | Прага, Чехія",
+"meta.desc":"Іван Байса (Ivan Baisa) — футболіст і атакувальний півзахисник у Празі. Чемпіон Суперліги серед чоловіків і U23 2025/26, переможець VEKRA Superfinále 2026.",
+"nav.stats":"Статистика","nav.career":"Кар'єра","nav.trophies":"Трофеї","nav.life":"Поза полем","nav.about":"Про мене",
+"hero.eyebrow":"Номер 11 · Прага, Чехія","hero.h1b":"Номер одинадцять.",
+"hero.lede":"Атакувальний півзахисник у Празі, Чехія. Чемпіон Суперліги з малого футболу та переможець VEKRA Superfinále 2026 — плюс великий футбол по вихідних. Футбол займає більшу частину тижня. Решта цієї сторінки — про іншу частину.",
+"hero.cta1":"Подивитися цифри →","hero.cta2":"Стежити в Instagram",
+"hero.m1v":"Номер 11","hero.m1l":"Ігровий номер","hero.m2v":"Півзахист","hero.m2l":"Позиція","hero.m3v":"Прага","hero.m3l":"Місто","hero.m4v":"2 титули","hero.m4l":"Сезон 2025/26",
+"chip.goals":"142 голи","chip.assists":"103 асисти","chip.total":"за кар'єру",
+"mq":["Атакувальний півзахист","Малий футбол","Суперліга","Стандарти","Прага","Номер 11"],
+"stats.eyebrow":"У цифрах","stats.h2":"142 голи. 103 асисти. Одинадцять сезонів.",
+"stats.p":"Підсумки з юнацького футболу, великого футболу та Суперліги з малого футболу від 2015 року. Асисти враховані лише там, де вони офіційно фіксувалися.",
+"stats.s1":"Голи за кар'єру","stats.s1i":"У 268 матчах","stats.s2":"Асисти за кар'єру","stats.s2i":"Найкращий сезон: 21 у 2025/26",
+"stats.s3":"Здобуті трофеї","stats.s3i":"Три з них у 2026 році","stats.s4":"Результативних дій / матч","stats.s4i":"Середнє за кар'єру",
+"fact.n1":"ФАКТ 01","fact.n2":"ФАКТ 02","fact.n3":"ФАКТ 03","fact.n4":"ФАКТ 04",
+"fact.h1":"Найкращий бомбардир і асистент в одному сезоні",
+"fact.p1":"У сезоні 2025/26 завершив Суперлігу з 26 голами та 21 асистом — єдиний гравець дивізіону, який очолив обидва списки водночас. 47 результативних дій у 30 матчах.",
+"fact.t1a":"Золотий бутс 2026","fact.t1b":"Плеймейкер сезону",
+"fact.h2":"Два трофеї за один сезон",
+"fact.p2":"1-ше місце Суперліги серед чоловіків і 1-ше місце Суперліги U23, обидва за 2025/26 — дорослий і молодіжний титули в один рік. А зверху ще й Superfinále.",
+"fact.h3":"Стандарти — його спеціальність",
+"fact.p3":"Сім голів прямим ударом зі штрафного минулого сезону і 24 асисти зі стандартів за останні три роки. Якщо це в межах 25 метрів і трохи лівіше центру — б'є він.",
+"fact.t3a":"Штрафні","fact.t3b":"Кутові",
+"fact.h4":"268 матчів, жодної червоної картки",
+"fact.p4":"Вісімнадцять жовтих за одинадцять років і жодного вилучення. Для півзахисника, який щотижня приймає м'яч під тиском, залишатися на полі — це теж статистика.",
+"fact.t4a":"Фейр-плей","fact.t4b":"11 сезонів",
+"car.eyebrow":"Кар'єра","car.h2":"Одинадцять років. Той самий номер на спині.",
+"car.p":"Почав у дев'ять років. У чотирнадцять перейшов з флангу в центр і більше звідти не йшов.",
+"car.h3a":"Юнацький футбол","car.ra":"U13 → U15 · Півзахисник",
+"car.pa":"Три роки основ. У чотирнадцять перейшов з флангу всередину, коли тренер помітив, що пасує він краще, ніж обіграє. 34 голи та 29 асистів по всіх вікових групах.",
+"car.h3b":"Юнацька ліга","car.rb":"U17 → U19 · Атакувальний півзахисник",
+"car.pb":"Перший змагальний футбол і перша медаль — зимовий кубок U19 у 2020 році. Наступного сезону друге місце в лізі. 41 гол і 28 асистів у 88 матчах.",
+"car.yc":"2021 — дотепер","car.h3c":"Великий футбол · Прага","car.rc":"Номер 11 · Атакувальний півзахисник",
+"car.pc":"Вихідний футбол на траві в Празі та навколо неї. Досі одинадцятий номер, досі б'є стандарти, досі той, хто опускається в зону, розвертається і знаходить пас уперед.",
+"car.yd":"2024 — дотепер","car.h3d":"Суперліга з малого футболу","car.rd":"Атакувальний півзахисник · Чемпіон 2025/26",
+"car.pd":"Малий футбол на національному рівні йому підходить: щільніший простір, швидші рішення, більше м'яча. У сезоні 2025/26 виграв дорослий титул і U23, а в червні 2026 підняв VEKRA Superfinále.",
+"car.cap":"Винести м'яч із півзахисту — та частина гри, у яку він грав би цілий день, якби дозволили.",
+"tro.eyebrow":"Вітрина трофеїв","tro.h2":"П'ять трофеїв. Три з них за одне літо.",
+"tro.b1h":"Superfinále 2026",
+"tro.b1p":"Останній день сезону малого футболу, перед великим екраном і на дуже мокрій сцені. Два кубки в руках, медаль на шиї і єдине фото за весь рік, яке йому справді подобається.",
+"tro.c1h":"Суперліга (чоловіки) — 1-ше місце",
+"tro.c1p":"Національний титул серед чоловіків. 30 матчів, 26 голів, 21 асист і перше місце за два тури до кінця. Його найкращий сезон за будь-яким показником.",
+"tro.c1t":"26 голів · 21 асист","tro.win":"Чемпіони","tro.winner":"Переможець",
+"tro.c2h":"Суперліга U23 — 1-ше місце",
+"tro.c2p":"Титул до 23 років у тому ж сезоні, здобутий практично тим самим складом. Два трофеї ліги, одна команда, один рік.",
+"tro.c2t":"Подвійний сезон","tro.c3h":"VEKRA Superfinále",
+"tro.c3p":"Плей-оф за один червневий вікенд, вирішений на розмоклому полі під грозою. Два асисти у фіналі, обидва зі стандартів, і найбільший кубок із трьох.",
+"tro.c3t":"2 асисти у фіналі","tro.c4h":"Зимовий кубок U19",
+"tro.c4p":"Перший трофей — і досі той, що тоді здавався найбільшим. Фінал 2:1: забив перший гол, на 88-й хвилині віддав на переможний, шість голів за турнір.",
+"tro.c4t":"6 голів · 4 асисти","tro.b2badge":"🥇 Роздягальня · червень 2026",
+"tro.b2h":"Усі три, за п'ять хвилин після фінального свистка",
+"tro.b2p":"Суперліга серед чоловіків з одного боку, Суперліга U23 з іншого, Superfinále посередині. Бутси зняті, медаль у зубах, і досі не знає, що сказати.",
+"hob.eyebrow":"Поза полем","hob.h2":"Три речі, які заповнюють решту тижня.","hob.p":"Футбол забирає п'ять вечорів. Ось що відбувається між ними.",
+"hob.h1":"Спортзал","hob.p1":"П'ять тренувань на тиждень, побудованих радше на вибуховості, ніж на об'ємі. Низ у понеділок і четвер, верх у вівторок і п'ятницю, мобільність у неділю. Ноги не пропускає ніколи — це робота.",
+"hob.h3b":"Ігри","hob.p2":"FC і Warzone, здебільшого з тими самими чотирма людьми ще зі школи. Режим кар'єри сприймає занадто серйозно — зараз восьмий сезон збереження, де відбудовує команду з четвертого дивізіону.",
+"hob.h3c":"Музика","hob.p3":"Складає передматчевий плейлист для всієї команди — це більша відповідальність, ніж капітанська пов'язка. Хіп-хоп і афробітс перед грою, щось повільніше дорогою додому.",
+"ab.eyebrow":"Трохи особистого","ab.h2":"Про мене, чесно.","ab.p":"Решта цієї сторінки — про футбол. Ця частина — ні.",
+"ab.p1":"Мене звати Іван Байса — Байса Іван, якщо читати навпаки. У футбол граю з дев'яти років, і більшість людей знайомляться зі мною саме через нього. Але в мені є більше, ніж номер на спині.",
+"ab.p2":"Я спокійний, більше слухаю, ніж говорю, і, можливо, надто відданий — люди, які мені близькі, близькі роками. Спорт навчив мене дисципліни й уміння програвати, і те й інше важить поза полем не менше, ніж на ньому.",
+"ab.p3":"Шукаю щось справжнє, а не випадкове. Когось, з ким у неділю приготую вечерю, з ким поїду кудись після сезону і поруч з ким можна помовчати без незручності. Когось зі своєю справою — кар'єрою, захопленням, планом — бо своє я маю і волів би, щоб обидва щось приносили.",
+"ab.p4":"Якщо це про вас — напишіть мені в Instagram. Краще одна хороша розмова, ніж сотня метчів.",
+"ab.fb":"Чесне попередження","ab.fp":"Суботи з серпня по червень — матчеві, і я тренуюся п'ять вечорів на тиждень. Телефон тоді не беру. Все інше — питання домовленості.",
+"ab.l1b":"Де я","ab.l1s":"Живу в Празі · тренуюся п'ять днів на тиждень · більшість вечорів вільний після восьмої.",
+"ab.l2b":"Який я","ab.l2s":"Спокійний, прямий, із сухим гумором. Поганий у світських розмовах, хороший у тій, що йде після них.",
+"ab.l3b":"Що шукаю","ab.l3s":"Щось серйозне. Когось доброго, самостійного й чесного — решту розберемо разом.",
+"ab.l4b":"Гарне перше побачення","ab.l4s":"Приготувати щось разом або довга прогулянка й кава. Не гучний бар.",
+"ab.l5b":"Що неприйнятно","ab.l5s":"Нечесність і люди, які грубі з офіціантами. Це весь список.",
+"ab.l6b":"Плани після сезону","ab.l6s":"Щоліта два тижні десь у теплі. Компанія вітається.",
+"cta.eyebrow":"Напишіть","cta.h2":"Найкраще знайти мене в Instagram.",
+"cta.p":"Футбольні пропозиції, перегляди або просто розмова — повідомлення відкриті, і я їх справді читаю.","cta.mail":"Написати e-mail",
+"foot.c":"© 2026 Іван Байса (Ivan Baisa) · футболіст, Прага, Чехія","foot.mail":"✉ E-mail",
+"img.match":"Іван Байса прикриває м'яч у матчі в Празі у футболці з номером 11",
+"img.run":"Іван Байса веде м'яч уперед на осінньому полі",
+"img.sf":"Іван Байса на сцені VEKRA Superfinále 2026 із двома кубками",
+"img.tro":"Іван Байса в роздягальні з кубком Superfinále та обома трофеями Суперліги",
+"img.beach":"Іван Байса біля моря після сезону"
+}
+};
+
+const LANGS=['en','cs','uk'];
+const HREF={en:'https://baisa.itsupport.space/',cs:'https://baisa.itsupport.space/?lang=cs',uk:'https://baisa.itsupport.space/?lang=uk'};
+
+function t(lang,key){const d=I18N[lang]||I18N.en;return (key in d && d[key]!=='')?d[key]:I18N.en[key];}
+
+function applyLang(lang,push){
+  if(LANGS.indexOf(lang)<0)lang='en';
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var v=t(lang,el.getAttribute('data-i18n'));
+    if(v!==undefined)el.textContent=v;
+  });
+  document.querySelectorAll('[data-i18n-alt]').forEach(function(el){
+    var v=t(lang,el.getAttribute('data-i18n-alt'));
+    if(v!==undefined)el.alt=v;
+  });
+  document.title=t(lang,'meta.title');
+  var md=document.querySelector('meta[name="description"]');if(md)md.content=t(lang,'meta.desc');
+  var cn=document.querySelector('link[rel="canonical"]');if(cn)cn.href=HREF[lang];
+  var og=document.querySelector('meta[property="og:url"]');if(og)og.content=HREF[lang];
+  var ot=document.querySelector('meta[property="og:title"]');if(ot)ot.content=t(lang,'meta.title');
+  var od=document.querySelector('meta[property="og:description"]');if(od)od.content=t(lang,'meta.desc');
+
+  var items=t(lang,'mq'),mk=document.getElementById('marquee');
+  mk.innerHTML='';
+  for(var r=0;r<2;r++)items.forEach(function(s){var el=document.createElement('span');el.textContent=s;mk.appendChild(el);});
+
+  document.querySelectorAll('#langsw button').forEach(function(b){
+    b.setAttribute('aria-pressed',String(b.dataset.lang===lang));
+  });
+  try{localStorage.setItem('lang',lang);}catch(e){}
+  if(push){var u=new URL(location.href);if(lang==='en')u.searchParams.delete('lang');else u.searchParams.set('lang',lang);history.replaceState({},'',u);}
+}
+
+(function(){
+  var p=new URLSearchParams(location.search).get('lang'),saved=null;
+  try{saved=localStorage.getItem('lang');}catch(e){}
+  var nav=(navigator.language||'en').slice(0,2).toLowerCase();
+  var auto=LANGS.indexOf(nav)>=0?nav:'en';
+  applyLang(p||saved||auto,false);
+})();
+
+document.getElementById('langsw').addEventListener('click',function(e){
+  var b=e.target.closest('button');if(b)applyLang(b.dataset.lang,true);
+});
+
+var tb=document.getElementById('themebtn');
+tb.addEventListener('click',function(){
+  var cur=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+  document.documentElement.setAttribute('data-theme',cur);
+  try{localStorage.setItem('theme',cur);}catch(e){}
+  var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=cur==='dark'?'#070a14':'#0b63d6';
+});
+
 const nav=document.getElementById('nav');
-addEventListener('scroll',()=>nav.classList.toggle('stuck',scrollY>8),{passive:true});
-const t=document.getElementById('toggle'),m=document.getElementById('menu');
-t.addEventListener('click',()=>{
-  const open=m.classList.toggle('open');
-  t.setAttribute('aria-expanded',open);
-  t.textContent=open?'✕':'☰';
+addEventListener('scroll',function(){nav.classList.toggle('stuck',scrollY>8);},{passive:true});
+var tg=document.getElementById('toggle'),m=document.getElementById('menu');
+tg.addEventListener('click',function(){
+  var open=m.classList.toggle('open');
+  tg.setAttribute('aria-expanded',String(open));
+  tg.textContent=open?'✕':'☰';
 });
-m.addEventListener('click',e=>{
-  if(e.target.tagName==='A'){m.classList.remove('open');t.textContent='☰';t.setAttribute('aria-expanded','false');}
+m.addEventListener('click',function(e){
+  if(e.target.tagName==='A'){m.classList.remove('open');tg.textContent='☰';tg.setAttribute('aria-expanded','false');}
 });
-const io=new IntersectionObserver(es=>{
-  es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*70);io.unobserve(e.target);}});
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e,i){if(e.isIntersecting){setTimeout(function(){e.target.classList.add('in');},i*70);io.unobserve(e.target);}});
 },{threshold:.1,rootMargin:'0px 0px -50px'});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
 </script>
 </body>
 </html>

@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://baisa.itsupport.space/</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baisa.itsupport.space/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://baisa.itsupport.space/?lang=cs"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://baisa.itsupport.space/?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baisa.itsupport.space/"/>
     <image:image>
       <image:loc>https://baisa.itsupport.space/match-prague.jpg</image:loc>
       <image:title>Ivan Baisa — match in Prague, No. 11</image:title>
@@ -26,5 +31,25 @@
       <image:loc>https://baisa.itsupport.space/beach.jpg</image:loc>
       <image:title>Ivan Baisa in the off-season</image:title>
     </image:image>
+  </url>
+  <url>
+    <loc>https://baisa.itsupport.space/?lang=cs</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baisa.itsupport.space/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://baisa.itsupport.space/?lang=cs"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://baisa.itsupport.space/?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baisa.itsupport.space/"/>
+  </url>
+  <url>
+    <loc>https://baisa.itsupport.space/?lang=uk</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baisa.itsupport.space/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://baisa.itsupport.space/?lang=cs"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://baisa.itsupport.space/?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baisa.itsupport.space/"/>
   </url>
 </urlset>
