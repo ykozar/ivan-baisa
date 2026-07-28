@@ -89,7 +89,7 @@
 }
 </script>
 
-<link rel="preload" as="image" href="match-prague.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="hero-match.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -192,7 +192,7 @@ header.nav.stuck{border-bottom-color:var(--line)}
 
 .shot{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--surface)}
 .shot img{width:100%;height:100%;object-fit:cover}
-.hero-shot{aspect-ratio:1143/935}
+.hero-shot{aspect-ratio:1280/853}
 .chip{position:absolute;background:var(--surface);border-radius:14px;padding:12px 16px;box-shadow:0 12px 30px -12px rgba(11,16,36,.4);font-size:13px;font-weight:600;display:flex;align-items:center;gap:9px;z-index:2}
 .chip small{display:block;font-weight:500;color:var(--ink-2);font-size:11px}
 .chip-a{left:-24px;top:12%}
@@ -261,15 +261,44 @@ section{padding:90px 0}
 .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.28);padding:7px 14px;border-radius:999px;font-size:12.5px;font-weight:600;letter-spacing:.04em;margin-bottom:14px}
 
 .hobbies{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.hob{border-radius:var(--radius);padding:30px;color:#fff;position:relative;overflow:hidden;min-height:250px;display:flex;flex-direction:column;justify-content:flex-end}
+.hob{border-radius:var(--radius);padding:30px;color:#fff;position:relative;overflow:hidden;min-height:280px;display:flex;flex-direction:column;justify-content:flex-end}
 .hob::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 12%,rgba(255,255,255,.26),transparent 55%)}
 .hob>*{position:relative;z-index:1}
 .hob .ic{font-size:30px;margin-bottom:auto}
 .hob h3{font-size:21px;margin-bottom:9px}
 .hob p{font-size:14.5px;line-height:1.6;opacity:.94}
+.hob img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hob.photo::after{background:linear-gradient(180deg,rgba(4,10,40,.25) 20%,rgba(4,10,40,.9))}
 .h1x{background:linear-gradient(150deg,#08153f,var(--blue))}
 .h2x{background:linear-gradient(150deg,var(--violet),var(--pink))}
 .h3x{background:linear-gradient(150deg,#036e86,var(--sky))}
+
+/* Split section: text + photo */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+.split.rev{direction:rtl}.split.rev>*{direction:ltr}
+.split p{color:var(--ink-2);font-size:17px;line-height:1.76;margin-bottom:18px}
+.split .shot{aspect-ratio:3/4}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:9px 15px;font-size:13.5px;font-weight:500;color:var(--ink-2)}
+
+/* Team photo grid */
+.duo{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;margin-top:36px}
+.duo figure{margin:0}
+.duo .shot{aspect-ratio:4/3}
+.duo figcaption{font-size:13px;color:var(--ink-2);margin-top:11px;line-height:1.5}
+
+/* Habits */
+.hab-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.hab{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:var(--surface)}
+.hab .media{position:relative;aspect-ratio:4/5;overflow:hidden;background:#0b1024}
+.hab .media img,.hab .media video{width:100%;height:100%;object-fit:cover;display:block}
+.hab .body{padding:26px}
+.hab h3{font-size:22px;margin-bottom:10px}
+.hab p{color:var(--ink-2);line-height:1.66;font-size:15.5px}
+.hab .kicker{position:absolute;left:16px;top:16px;z-index:2;background:rgba(11,16,36,.62);backdrop-filter:blur(6px);color:#fff;border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:600;letter-spacing:.03em}
+.hab-note{margin-top:26px;border-radius:18px;padding:22px;background:linear-gradient(135deg,rgba(11,99,214,.1),rgba(34,201,242,.12))}
+.hab-note b{font-family:'Space Grotesk';font-size:15px;display:block;margin-bottom:8px}
+.hab-note p{font-size:15px;margin:0;color:var(--ink-2);line-height:1.65}
 
 .date-sec{background:var(--surface);border-block:1px solid var(--line)}
 .date-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
@@ -307,17 +336,23 @@ footer{border-top:1px solid var(--line);padding:38px 0;background:var(--surface)
 .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
 .rv.in{opacity:1;transform:none}
 
-@media(max-width:1080px){.nav-links{gap:18px;font-size:14px}}
+@media(max-width:1180px){.nav-links{gap:16px;font-size:14px}}
 @media(max-width:980px){.statgrid{grid-template-columns:repeat(2,1fr)}.hobbies{grid-template-columns:1fr}}
 @media(max-width:900px){
   .hero-grid{grid-template-columns:1fr;gap:44px}
-  .hero-shot{max-width:390px;margin:0 auto}
+  .hero-shot{max-width:460px;margin:0 auto}
   .career-grid,.date-grid{grid-template-columns:1fr;gap:36px}
   .sticky-shot{position:static;max-width:420px}
   .cards{grid-template-columns:1fr}
   .date-shot .shot{max-width:420px}
+  .split{grid-template-columns:1fr;gap:34px}
+  .split.rev{direction:ltr}
+  .split .shot{max-width:430px}
+  .duo{grid-template-columns:1fr}
+  .hab-grid{grid-template-columns:1fr}
+  .hab .media{aspect-ratio:4/3}
 }
-@media(max-width:820px){
+@media(max-width:1060px){
   .nav-links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--surface);border-bottom:1px solid var(--line);padding:8px 24px 20px}
   .nav-links.open{display:flex}
   .nav-links a{padding:14px 0;border-bottom:1px solid var(--line)}
@@ -345,7 +380,9 @@ footer{border-top:1px solid var(--line);padding:38px 0;background:var(--surface)
     <nav class="nav-links" id="menu">
       <a href="#stats" data-i18n="nav.stats">Stats</a>
       <a href="#career" data-i18n="nav.career">Career</a>
+      <a href="#team" data-i18n="nav.team">Team</a>
       <a href="#trophies" data-i18n="nav.trophies">Trophies</a>
+      <a href="#prague" data-i18n="nav.prague">Prague</a>
       <a href="#life" data-i18n="nav.life">Off the pitch</a>
       <a class="btn btn-primary" href="#about-me" data-i18n="nav.about">About me</a>
     </nav>
@@ -384,7 +421,7 @@ footer{border-top:1px solid var(--line);padding:38px 0;background:var(--surface)
     </div>
     <div class="rv">
       <div class="shot hero-shot">
-        <img src="match-prague.jpg" data-i18n-alt="img.match" alt="Ivan Baisa shielding the ball in a match in Prague, wearing the navy number 11 shirt" width="1143" height="935" decoding="async" loading="eager" fetchpriority="high">
+        <img src="hero-match.jpg" data-i18n-alt="img.hero" alt="Ivan Baisa on the ball during a Superliga match in Prague" width="1280" height="853" decoding="async" loading="eager" fetchpriority="high">
         <div class="chip chip-a"><span class="sq" style="background:rgba(11,99,214,.14)">⚽</span><span><span data-i18n="chip.goals">142 goals</span><small data-i18n="chip.total">career total</small></span></div>
         <div class="chip chip-b"><span class="sq" style="background:rgba(34,201,242,.18)">🅰</span><span><span data-i18n="chip.assists">103 assists</span><small data-i18n="chip.total">career total</small></span></div>
       </div>
@@ -462,7 +499,39 @@ footer{border-top:1px solid var(--line);padding:38px 0;background:var(--surface)
   </div>
 </section>
 
-<section id="trophies">
+<section id="team">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow" data-i18n="team.eyebrow">The squad</span>
+      <h2 data-i18n="team.h2">Nobody wins two titles on their own.</h2>
+      <p data-i18n="team.p">Eleven years of football and the best parts are almost never the goals. They're the changing room twenty minutes after, when nobody wants to leave yet.</p>
+    </div>
+    <div class="split rv">
+      <div>
+        <p data-i18n="team.p1">This group has been more or less the same for three seasons. Same warm-up jokes, same arguments about the playlist, same four people who are always late. When you play with the same players long enough you stop needing to look up — you already know where they'll be.</p>
+        <p data-i18n="team.p2">The men's title and the U23 title in 2025/26 came from the same squad. That's not depth on paper, that's a group that turned up to training in February when it was dark and freezing and nothing was decided yet.</p>
+        <div class="pills">
+          <span class="pill" data-i18n="team.pill1">🏟️ Prague</span>
+          <span class="pill" data-i18n="team.pill2">🤝 Same core for 3 seasons</span>
+          <span class="pill" data-i18n="team.pill3">🏆 2 titles + Superfinále</span>
+        </div>
+      </div>
+      <div class="shot"><img src="team-celebrate.jpg" data-i18n-alt="img.team2" alt="Ivan Baisa and the squad celebrating in the changing room after a win" width="1280" height="960" decoding="async" loading="lazy"></div>
+    </div>
+    <div class="duo rv">
+      <figure>
+        <div class="shot"><img src="team.jpg" data-i18n-alt="img.team" alt="The full squad and coaching staff together before a match" width="1500" height="1125" decoding="async" loading="lazy"></div>
+        <figcaption data-i18n="team.cap1">The whole group, coaches included. Half of this photo has been here since the start.</figcaption>
+      </figure>
+      <figure>
+        <div class="shot"><img src="match-prague.jpg" data-i18n-alt="img.match" alt="Ivan Baisa shielding the ball in a match in Prague, wearing the number 11 shirt" width="1143" height="935" decoding="async" loading="lazy"></div>
+        <figcaption data-i18n="team.cap2">Weekend eleven-a-side. Different shirt, same number.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="trophies" style="background:var(--surface);border-block:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow" data-i18n="tro.eyebrow">Trophy cabinet</span>
@@ -512,6 +581,29 @@ footer{border-top:1px solid var(--line);padding:38px 0;background:var(--surface)
   </div>
 </section>
 
+<section id="prague">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow" data-i18n="pr.eyebrow">The city</span>
+      <h2 data-i18n="pr.h2">Prague is home.</h2>
+      <p data-i18n="pr.p">Not a stop on the way somewhere. The place the whole week is built around.</p>
+    </div>
+    <div class="split rev rv">
+      <div class="shot"><img src="prague.jpg" data-i18n-alt="img.prague" alt="Ivan Baisa on Old Town Square in Prague at night, with the Týn Church behind" width="960" height="1280" decoding="async" loading="lazy"></div>
+      <div>
+        <p data-i18n="pr.p1">Every pitch I play on is within an hour of this square. Training is here, the league is here, the people are here. When someone asks where I'm from, the honest answer is: this is where my life happens.</p>
+        <p data-i18n="pr.p2">It's a good city for someone who trains five evenings a week. Everything is close, you can walk most of it, and after a bad match there's nowhere better to clear your head than the river at eleven at night when the tourists have gone.</p>
+        <p data-i18n="pr.p3">Winter is long and the pitches turn to mud in February. Nobody who plays here will pretend otherwise. You get used to it, and the first properly warm evening in April feels like a reward.</p>
+        <div class="pills">
+          <span class="pill" data-i18n="pr.pill1">📍 Based here year-round</span>
+          <span class="pill" data-i18n="pr.pill2">🌙 River walks after bad games</span>
+          <span class="pill" data-i18n="pr.pill3">❄️ Mud from November to March</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="life" style="background:var(--surface);border-block:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head rv">
@@ -520,9 +612,45 @@ footer{border-top:1px solid var(--line);padding:38px 0;background:var(--surface)
       <p data-i18n="hob.p">Football takes five evenings. Here's what happens in the gaps.</p>
     </div>
     <div class="hobbies">
-      <div class="hob h1x rv"><span class="ic">🏋️</span><h3 data-i18n="hob.h1">Gym</h3><p data-i18n="hob.p1">Five sessions a week, built around explosiveness rather than size. Lower body Monday and Thursday, upper Tuesday and Friday, mobility on Sunday. Never skips legs — it's the job.</p></div>
+      <div class="hob photo rv"><img class="bg" src="gym.jpg" data-i18n-alt="img.gym" alt="Ivan Baisa on the beach in the off-season, showing the condition the gym work builds" width="1500" height="1125" decoding="async" loading="lazy"><span class="ic">🏋️</span><h3 data-i18n="hob.h1">Gym</h3><p data-i18n="hob.p1">Five sessions a week, built around explosiveness rather than size. Lower body Monday and Thursday, upper Tuesday and Friday, mobility on Sunday. Never skips legs — it's the job.</p></div>
       <div class="hob h2x rv"><span class="ic">🎮</span><h3 data-i18n="hob.h3b">Gaming</h3><p data-i18n="hob.p2">FC and Warzone, mostly with the same four people since school. Career mode taken far too seriously — currently eight seasons into a save rebuilding a team from the fourth division.</p></div>
       <div class="hob h3x rv"><span class="ic">🎧</span><h3 data-i18n="hob.h3c">Music</h3><p data-i18n="hob.p3">Makes the pre-match playlist for the whole squad, which is a bigger responsibility than the armband. Hip-hop and afrobeats before games, something slower on the drive home.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="habits">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow" data-i18n="hab.eyebrow">Not all of it is discipline</span>
+      <h2 data-i18n="hab.h2">The bad habits.</h2>
+      <p data-i18n="hab.p">Anyone who tells you they train five days a week and have no vices is either lying or no fun. Here are mine, honestly.</p>
+    </div>
+    <div class="hab-grid">
+      <article class="hab rv">
+        <div class="media">
+          <span class="kicker" data-i18n="hab.k1">Vice 01</span>
+          <img src="shisha.jpg" data-i18n-alt="img.shisha" alt="Ivan Baisa relaxing on a balcony with a shisha in the evening" width="1125" height="1500" decoding="async" loading="lazy">
+        </div>
+        <div class="body">
+          <h3 data-i18n="hab.h1">Shisha on the balcony</h3>
+          <p data-i18n="hab.p1">Sunday evening, lights on the balcony, two hours of not talking about football. It's the one thing that properly switches my head off after a match. Not clever, not defensible, and I'm not going to pretend it's a superfood.</p>
+        </div>
+      </article>
+      <article class="hab rv">
+        <div class="media">
+          <span class="kicker" data-i18n="hab.k2">Vice 02</span>
+          <video src="beer.mp4" poster="beer-poster.jpg" autoplay muted loop playsinline preload="metadata" data-i18n-alt="img.beer" aria-label="Ivan Baisa laughing over dinner and a beer on holiday"></video>
+        </div>
+        <div class="body">
+          <h3 data-i18n="hab.h2b">A cold beer after a win</h3>
+          <p data-i18n="hab.p2">Never before a match, never the night before training. But after three points, at a table with the people I just played with, a beer tastes better than it has any right to. In the off-season the rule relaxes considerably.</p>
+        </div>
+      </article>
+    </div>
+    <div class="hab-note rv">
+      <b data-i18n="hab.nb">For the record</b>
+      <p data-i18n="hab.np">In season the boring version is true: no alcohol the two days before a match, in bed by eleven, five gym sessions and four team trainings a week. The photos on this page are the exception, not the routine — but they're real, and I'd rather show them than pretend.</p>
     </div>
   </div>
 </section>
@@ -661,7 +789,46 @@ en:{
 "img.run":"Ivan Baisa driving forward with the ball on an autumn pitch",
 "img.sf":"Ivan Baisa on stage at the VEKRA Superfinále 2026 holding two trophies",
 "img.tro":"Ivan Baisa in the changing room with the Superfinále cup and both Superliga trophies",
-"img.beach":"Ivan Baisa by the sea during the off-season"
+"img.beach":"Ivan Baisa by the sea during the off-season",
+"nav.team":"Team",
+"nav.prague":"Prague",
+"img.hero":"Ivan Baisa on the ball during a Superliga match in Prague",
+"team.eyebrow":"The squad",
+"team.h2":"Nobody wins two titles on their own.",
+"team.p":"Eleven years of football and the best parts are almost never the goals. They're the changing room twenty minutes after, when nobody wants to leave yet.",
+"team.p1":"This group has been more or less the same for three seasons. Same warm-up jokes, same arguments about the playlist, same four people who are always late. When you play with the same players long enough you stop needing to look up — you already know where they'll be.",
+"team.p2":"The men's title and the U23 title in 2025/26 came from the same squad. That's not depth on paper, that's a group that turned up to training in February when it was dark and freezing and nothing was decided yet.",
+"team.pill1":"🏟️ Prague",
+"team.pill2":"🤝 Same core for 3 seasons",
+"team.pill3":"🏆 2 titles + Superfinále",
+"img.team2":"Ivan Baisa and the squad celebrating in the changing room after a win",
+"img.team":"The full squad and coaching staff together before a match",
+"team.cap1":"The whole group, coaches included. Half of this photo has been here since the start.",
+"team.cap2":"Weekend eleven-a-side. Different shirt, same number.",
+"pr.eyebrow":"The city",
+"pr.h2":"Prague is home.",
+"pr.p":"Not a stop on the way somewhere. The place the whole week is built around.",
+"img.prague":"Ivan Baisa on Old Town Square in Prague at night, with the Týn Church behind",
+"pr.p1":"Every pitch I play on is within an hour of this square. Training is here, the league is here, the people are here. When someone asks where I'm from, the honest answer is: this is where my life happens.",
+"pr.p2":"It's a good city for someone who trains five evenings a week. Everything is close, you can walk most of it, and after a bad match there's nowhere better to clear your head than the river at eleven at night when the tourists have gone.",
+"pr.p3":"Winter is long and the pitches turn to mud in February. Nobody who plays here will pretend otherwise. You get used to it, and the first properly warm evening in April feels like a reward.",
+"pr.pill1":"📍 Based here year-round",
+"pr.pill2":"🌙 River walks after bad games",
+"pr.pill3":"❄️ Mud from November to March",
+"img.gym":"Ivan Baisa on the beach in the off-season, showing the condition the gym work builds",
+"hab.eyebrow":"Not all of it is discipline",
+"hab.h2":"The bad habits.",
+"hab.p":"Anyone who tells you they train five days a week and have no vices is either lying or no fun. Here are mine, honestly.",
+"hab.k1":"Vice 01",
+"img.shisha":"Ivan Baisa relaxing on a balcony with a shisha in the evening",
+"hab.h1":"Shisha on the balcony",
+"hab.p1":"Sunday evening, lights on the balcony, two hours of not talking about football. It's the one thing that properly switches my head off after a match. Not clever, not defensible, and I'm not going to pretend it's a superfood.",
+"hab.k2":"Vice 02",
+"img.beer":"Ivan Baisa laughing over dinner and a beer on holiday",
+"hab.h2b":"A cold beer after a win",
+"hab.p2":"Never before a match, never the night before training. But after three points, at a table with the people I just played with, a beer tastes better than it has any right to. In the off-season the rule relaxes considerably.",
+"hab.nb":"For the record",
+"hab.np":"In season the boring version is true: no alcohol the two days before a match, in bed by eleven, five gym sessions and four team trainings a week. The photos on this page are the exception, not the routine — but they're real, and I'd rather show them than pretend."
 },
 cs:{
 "meta.title":"Ivan Baisa — fotbalista, číslo 11 | Praha, Česká republika",
@@ -738,7 +905,46 @@ cs:{
 "img.run":"Ivan Baisa vede míč dopředu na podzimním hřišti",
 "img.sf":"Ivan Baisa na pódiu VEKRA Superfinále 2026 se dvěma poháry",
 "img.tro":"Ivan Baisa v kabině s pohárem ze Superfinále a oběma trofejemi ze Superligy",
-"img.beach":"Ivan Baisa u moře po sezóně"
+"img.beach":"Ivan Baisa u moře po sezóně",
+"nav.team":"Tým",
+"nav.prague":"Praha",
+"img.hero":"Ivan Baisa s míčem v zápase Superligy v Praze",
+"team.eyebrow":"Tým",
+"team.h2":"Dva tituly nikdo nevyhraje sám.",
+"team.p":"Jedenáct let fotbalu a nejlepší části skoro nikdy nejsou góly. Je to kabina dvacet minut po zápase, když se nikomu ještě nechce odejít.",
+"team.p1":"Tahle parta je víceméně stejná už tři sezóny. Stejné vtipy při rozcvičce, stejné hádky o playlist, stejní čtyři, co chodí pozdě. Když hrajete se stejnými lidmi dost dlouho, přestanete se muset dívat — už víte, kde budou.",
+"team.p2":"Titul mužů i titul U23 v sezóně 2025/26 přišly od stejného kádru. To není hloubka na papíře, to je parta, která chodila na tréninky v únoru, když byla tma, zima a ještě nebylo nic rozhodnuté.",
+"team.pill1":"🏟️ Praha",
+"team.pill2":"🤝 Stejné jádro 3 sezóny",
+"team.pill3":"🏆 2 tituly + Superfinále",
+"img.team2":"Ivan Baisa a tým slaví výhru v kabině",
+"img.team":"Celý tým i realizační tým před zápasem",
+"team.cap1":"Celá parta včetně trenérů. Půlka téhle fotky je tu od začátku.",
+"team.cap2":"Víkendový velký fotbal. Jiný dres, stejné číslo.",
+"pr.eyebrow":"Město",
+"pr.h2":"Praha je domov.",
+"pr.p":"Ne zastávka cestou někam jinam. Místo, kolem kterého je postavený celý týden.",
+"img.prague":"Ivan Baisa na Staroměstském náměstí v Praze večer, v pozadí Týnský chrám",
+"pr.p1":"Každé hřiště, na kterém hraju, je do hodiny od tohohle náměstí. Trénink je tady, liga je tady, lidi jsou tady. Když se mě někdo zeptá, odkud jsem, upřímná odpověď je: tady se odehrává můj život.",
+"pr.p2":"Je to dobré město pro někoho, kdo trénuje pět večerů v týdnu. Všechno je blízko, většinu se dá projít pěšky, a po špatném zápase není lepší místo na vyčištění hlavy než řeka v jedenáct večer, když už jsou turisti pryč.",
+"pr.p3":"Zima je dlouhá a hřiště se v únoru mění v bahno. Nikdo, kdo tady hraje, nebude tvrdit opak. Zvyknete si a první opravdu teplý dubnový večer pak působí jako odměna.",
+"pr.pill1":"📍 Celoročně tady",
+"pr.pill2":"🌙 Procházky u řeky po špatných zápasech",
+"pr.pill3":"❄️ Bahno od listopadu do března",
+"img.gym":"Ivan Baisa na pláži po sezóně, kondice, kterou staví práce v posilovně",
+"hab.eyebrow":"Není to samá disciplína",
+"hab.h2":"Zlozvyky.",
+"hab.p":"Kdo tvrdí, že trénuje pět dní v týdnu a nemá žádné neřesti, buď lže, nebo s ním není zábava. Tady jsou moje, na rovinu.",
+"hab.k1":"Neřest 01",
+"img.shisha":"Ivan Baisa odpočívá večer na balkoně u vodní dýmky",
+"hab.h1":"Vodní dýmka na balkoně",
+"hab.p1":"Nedělní večer, světýlka na balkoně, dvě hodiny bez řečí o fotbale. Je to jediná věc, která mi po zápase pořádně vypne hlavu. Není to chytré, není to obhajitelné, a nebudu předstírat, že je to superpotravina.",
+"hab.k2":"Neřest 02",
+"img.beer":"Ivan Baisa se směje u večeře a piva na dovolené",
+"hab.h2b":"Vychlazené pivo po výhře",
+"hab.p2":"Nikdy před zápasem, nikdy večer před tréninkem. Ale po třech bodech, u stolu s lidmi, se kterými jsem právě hrál, chutná pivo líp, než by mělo. Po sezóně se pravidlo výrazně uvolňuje.",
+"hab.nb":"Pro pořádek",
+"hab.np":"V sezóně platí ta nudná verze: dva dny před zápasem žádný alkohol, v jedenáct v posteli, pět posilovny a čtyři tréninky s týmem týdně. Fotky na téhle stránce jsou výjimka, ne rutina — ale jsou skutečné a radši je ukážu, než abych něco předstíral."
 },
 uk:{
 "meta.title":"Іван Байса — футболіст, номер 11 | Прага, Чехія",
@@ -815,7 +1021,46 @@ uk:{
 "img.run":"Іван Байса веде м'яч уперед на осінньому полі",
 "img.sf":"Іван Байса на сцені VEKRA Superfinále 2026 із двома кубками",
 "img.tro":"Іван Байса в роздягальні з кубком Superfinále та обома трофеями Суперліги",
-"img.beach":"Іван Байса біля моря після сезону"
+"img.beach":"Іван Байса біля моря після сезону",
+"nav.team":"Команда",
+"nav.prague":"Прага",
+"img.hero":"Іван Байса з м'ячем у матчі Суперліги в Празі",
+"team.eyebrow":"Команда",
+"team.h2":"Два титули ніхто не виграє сам.",
+"team.p":"Одинадцять років футболу — і найкраще в ньому майже ніколи не голи. Це роздягальня через двадцять хвилин після матчу, коли ще нікому не хочеться йти.",
+"team.p1":"Ця компанія майже не змінюється вже три сезони. Ті самі жарти на розминці, ті самі суперечки про плейлист, ті самі четверо, які завжди запізнюються. Коли граєш з тими самими людьми достатньо довго, перестаєш піднімати голову — ти вже знаєш, де вони будуть.",
+"team.p2":"Дорослий титул і титул U23 у сезоні 2025/26 здобув фактично один склад. Це не глибина на папері — це група, яка приходила на тренування в лютому, коли темно, холодно і ще нічого не вирішено.",
+"team.pill1":"🏟️ Прага",
+"team.pill2":"🤝 Те саме ядро 3 сезони",
+"team.pill3":"🏆 2 титули + Superfinále",
+"img.team2":"Іван Байса і команда святкують перемогу в роздягальні",
+"img.team":"Уся команда з тренерським штабом перед матчем",
+"team.cap1":"Уся команда разом із тренерами. Половина цього фото тут від самого початку.",
+"team.cap2":"Вихідний великий футбол. Інша футболка, той самий номер.",
+"pr.eyebrow":"Місто",
+"pr.h2":"Прага — це дім.",
+"pr.p":"Не зупинка дорогою кудись. Місце, навколо якого побудований увесь тиждень.",
+"img.prague":"Іван Байса на Староміській площі в Празі вночі, позаду Тинський храм",
+"pr.p1":"Кожне поле, на якому я граю, — не далі години від цієї площі. Тренування тут, ліга тут, люди тут. Коли питають, звідки я, чесна відповідь така: саме тут відбувається моє життя.",
+"pr.p2":"Це гарне місто для того, хто тренується п'ять вечорів на тиждень. Усе поруч, більшість можна пройти пішки, а після поганого матчу немає кращого місця провітрити голову, ніж набережна об одинадцятій вечора, коли туристи вже розійшлися.",
+"pr.p3":"Зима довга, і в лютому поля перетворюються на болото. Ніхто, хто тут грає, не вдаватиме інакше. До цього звикаєш, і перший по-справжньому теплий квітневий вечір відчувається як нагорода.",
+"pr.pill1":"📍 Тут цілий рік",
+"pr.pill2":"🌙 Прогулянки біля річки після поганих ігор",
+"pr.pill3":"❄️ Багно з листопада до березня",
+"img.gym":"Іван Байса на пляжі після сезону — форма, яку будує робота в залі",
+"hab.eyebrow":"Не все тут дисципліна",
+"hab.h2":"Погані звички.",
+"hab.p":"Той, хто каже, що тренується п'ять днів на тиждень і не має жодних слабкостей, або бреше, або з ним нудно. Ось мої, чесно.",
+"hab.k1":"Слабкість 01",
+"img.shisha":"Іван Байса відпочиває ввечері на балконі з кальяном",
+"hab.h1":"Кальян на балконі",
+"hab.p1":"Недільний вечір, гірлянда на балконі, дві години без розмов про футбол. Це єдине, що після матчу справді вимикає мені голову. Не розумно, не виправдано, і я не вдаватиму, що це суперфуд.",
+"hab.k2":"Слабкість 02",
+"img.beer":"Іван Байса сміється за вечерею з пивом у відпустці",
+"hab.h2b":"Холодне пиво після перемоги",
+"hab.p2":"Ніколи перед матчем і ніколи ввечері перед тренуванням. Але після трьох очок, за столом з людьми, з якими щойно грав, пиво смакує краще, ніж мало б. Після сезону це правило суттєво пом'якшується.",
+"hab.nb":"Для чесності",
+"hab.np":"У сезоні працює нудна версія: жодного алкоголю за два дні до матчу, спати об одинадцятій, п'ять тренувань у залі й чотири з командою на тиждень. Фото на цій сторінці — виняток, а не рутина. Але вони справжні, і краще я їх покажу, ніж вдаватиму."
 }
 };
 
@@ -833,7 +1078,8 @@ function applyLang(lang,push){
   });
   document.querySelectorAll('[data-i18n-alt]').forEach(function(el){
     var v=t(lang,el.getAttribute('data-i18n-alt'));
-    if(v!==undefined)el.alt=v;
+    if(v===undefined)return;
+    if(el.tagName==='VIDEO')el.setAttribute('aria-label',v);else el.alt=v;
   });
   document.title=t(lang,'meta.title');
   var md=document.querySelector('meta[name="description"]');if(md)md.content=t(lang,'meta.desc');
