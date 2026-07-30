@@ -4,6 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-site-verification" content="0cbuYQDrHsglfiYPSPr0qGVaR6AXr9OjZCG_YpnaAj8">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-17ZDWCNE17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-17ZDWCNE17');
+</script>
 <title>Ivan Baisa — Footballer, No. 11 | Prague, Czech Republic</title>
 <meta name="description" content="Ivan Baisa (Baisa Ivan) — footballer and attacking midfielder in Prague, Czech Republic. Superliga Muži and U23 champion 2025/26, VEKRA Superfinále winner 2026. Career, stats, trophies and contact.">
 <meta name="author" content="Ivan Baisa">
@@ -1096,7 +1105,15 @@ function applyLang(lang,push){
     b.setAttribute('aria-pressed',String(b.dataset.lang===lang));
   });
   try{localStorage.setItem('lang',lang);}catch(e){}
-  if(push){var u=new URL(location.href);if(lang==='en')u.searchParams.delete('lang');else u.searchParams.set('lang',lang);history.replaceState({},'',u);}
+  if(push){
+    var u=new URL(location.href);
+    if(lang==='en')u.searchParams.delete('lang');else u.searchParams.set('lang',lang);
+    history.replaceState({},'',u);
+    if(typeof gtag==='function'){
+      gtag('event','language_switch',{language:lang});
+      gtag('event','page_view',{page_location:u.href,page_title:t(lang,'meta.title')});
+    }
+  }
 }
 
 (function(){
@@ -1117,6 +1134,15 @@ tb.addEventListener('click',function(){
   document.documentElement.setAttribute('data-theme',cur);
   try{localStorage.setItem('theme',cur);}catch(e){}
   var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=cur==='dark'?'#070a14':'#0b63d6';
+  if(typeof gtag==='function')gtag('event','theme_switch',{theme:cur});
+});
+
+// Track outbound clicks that actually matter: Instagram and email.
+document.addEventListener('click',function(e){
+  var a=e.target.closest('a');if(!a||typeof gtag!=='function')return;
+  var href=a.getAttribute('href')||'';
+  if(href.indexOf('instagram.com')>-1)gtag('event','click_instagram',{link_url:href});
+  else if(href.indexOf('mailto:')===0)gtag('event','click_email',{link_url:href});
 });
 
 const nav=document.getElementById('nav');
