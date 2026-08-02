@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
 
+# Google ad crawlers — needed for AdSense to read pages and target ads
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+User-agent: Google-AdSense-Reader
+Allow: /
+
 Sitemap: https://baisa.itsupport.space/sitemap.xml
