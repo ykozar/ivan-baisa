@@ -1,0 +1,2 @@
+# ads.txt — authorised digital sellers for baisa.itsupport.space
+google.com, pub-1445025551993553, DIRECT, f08c47fec0942fa0
